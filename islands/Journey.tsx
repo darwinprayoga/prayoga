@@ -40,7 +40,7 @@ export default function Journey(props: { onNext(): void, onBack(): void }) {
 
 
 
-                <menuitem class={tw`my-12`}>
+                <menuitem class={tw`w-full my-12`}>
                     <p class={tw`font-mono text-${_color}-600`}>Hi! let ya'll kno me</p>
                     <h1 class={tw`font-bold text-dark`}>Darwin Prayoga</h1>
                     <h2 class={tw`font-bold text-sub`}>Build up growth things</h2>
@@ -90,7 +90,7 @@ export default function Journey(props: { onNext(): void, onBack(): void }) {
                             <img src='/logo.png' class={tw`w-12 mr-4`} />
                             <menuitem class={tw`gap-0`}>
                                 <h3 class={tw`text-dark`}>Prayoga</h3>
-                                <p>specializing execute web design & code for any demand</p>
+                                <p>Specializing execute web design & code for any demand</p>
                             </menuitem>
                         </menu>
                         <button onClick={props.onNext} class={tw`focus:outline-none flex items-center gap-2 bg-${_color}-600 rounded-xl py-1 px-2 text-white`}>OPEN<Right class={tw`fill-current w-5`} /></button>
@@ -125,7 +125,7 @@ export default function Journey(props: { onNext(): void, onBack(): void }) {
 
 
                 <footer class={tw`mb-16`}>
-                    <menuitem class={tw`text-sub hover:text-${_color}-600 pointer items-center`}>
+                    <menuitem onClick={() => open('https://github.com/darwinprayoga/prayoga')} class={tw`text-sub hover:text-${_color}-600 pointer items-center`}>
                         <sub>Designed & Built by Darwin Prayoga</sub>
                         <menu class={tw`gap-2 mt-2`}>
                             <Star class={tw`fill-current w-3`} />

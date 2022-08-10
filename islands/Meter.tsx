@@ -13,8 +13,8 @@ export default function Meter() {
             <div class={tw`divider`} />
 
             <section>
-                <div class={tw`w-32 h-32 flex justify-center items-center my-6 rounded-full bg-green-200 text-stabilo border(stabilo 4)`}>
-                    <h1>98</h1>
+                <div class={tw`w-32 h-32 flex justify-center items-center my-6 rounded-full bg-green-200 text-green-700 border(stabilo 4)`}>
+                    <h1>100</h1>
                 </div>
                 <h3>Performance</h3>
             </section>
@@ -22,15 +22,15 @@ export default function Meter() {
             <section class={tw`grid grid-cols-2 gap-8 my-8`}>
                 <menuitem>
                     <p>Speed Index</p>
-                    <p class={tw`text-stabilo`}>3.3s</p>
+                    <p class={tw`text-stabilo`}>0.7s</p>
                     <p>Largest Contentful Paint</p>
-                    <p class={tw`text-stabilo`}>2.0s</p>
+                    <p class={tw`text-stabilo`}>0.7s</p>
                 </menuitem>
                 <menuitem>
                     <p>Time to Interactive</p>
-                    <p class={tw`text-stabilo`}>2.2s</p>
+                    <p class={tw`text-stabilo`}>0.7s</p>
                     <p>Total Blocking Time</p>
-                    <p class={tw`text-stabilo`}>130ms</p>
+                    <p class={tw`text-stabilo`}>0ms</p>
                 </menuitem>
             </section>
         </div>
