@@ -7,7 +7,11 @@ export default function Head(props: { title?: string }) {
     return (
         <head>
 
-            <title>{props.title || 'Fresh'}</title>
+            <title>{props.title || 'Darwin Prayoga'}</title>
+
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            
+            <link rel="shortcut icon" href="/favicon.ico" />
 
             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
@@ -19,7 +23,7 @@ export default function Head(props: { title?: string }) {
 
 export const Lottie = (props: { src: string }) => {
     //@ts-ignore: any
-    return <lottie-player src={props.src}  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay />
+    return <lottie-player src={props.src} background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay />
 }
 
 
