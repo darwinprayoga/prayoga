@@ -93,14 +93,14 @@ export default function Integrity(props: { onNext(): void, onBack(): void }) {
                                 <button class={tw`actFilled mr-6`}><h2>🪀</h2></button>
                                 <menuitem>
                                     <h3>Full Animaiton</h3>
-                                    <p>Freedom of browser with extend anything through code</p>
+                                    <p>Freedom of browser with extends</p>
                                 </menuitem>
                             </menu>
                             <menu class={tw`justify-start py-4`}>
                                 <button class={tw`actFilled mr-6`}><h2>🛒</h2></button>
                                 <menuitem>
                                     <h3>Support a Lot</h3>
-                                    <p>Import smart components and get a lot of access</p>
+                                    <p>Get a lot of components & access</p>
                                 </menuitem>
                             </menu>
                             <div class={tw`flex justify-between items-center py-2`}>

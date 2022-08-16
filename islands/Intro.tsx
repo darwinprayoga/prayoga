@@ -19,7 +19,7 @@ export default function Intro(props: { onNext(): void, onBottom(): void }) {
     return (
         <div class={tw`fixed bg-${dark} text-${text} shadow-inner inset-0 flex justify-center items-center`}>
 
-            <img class={tw`fixed bottom-0 right-0 w-80`} src="/avatar.png" />
+            <img draggable={false} class={tw`fixed bottom-0 right-0 w-80`} src="/avatar.png" />
 
             <button onClick={props.onNext} class={tw`focus:outline-none fixed text-blue-600 ${hide} gap-2 m-4 items-center top-0 right-0`}>
                 <h3>Next</h3>

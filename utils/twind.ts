@@ -36,7 +36,10 @@ export const config: Configuration = {
         smoke: "#F2F2F6",
         sub: "#6C6C70",
         hint: "rgba(235, 235, 245, 0.6)",
-        stabilo: "#32D74B"
+        stabilo: "#32D74B",
+        blue: {
+          600: '#007AFF'
+        }
       },
     },
   },

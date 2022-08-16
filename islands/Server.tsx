@@ -15,7 +15,7 @@ export default function Server(props: { onBack(): void }) {
         <div class={tw`fixed flex flex-col justify-start items-center w-full p-4 bottom-0`}>
 
             <div class={tw`flex flex-col items-center`}>
-                <Lottie src='https://assets7.lottiefiles.com/private_files/lf30_VBnEpi.json' />
+                <Lottie src='/server.json' />
                 <section>
                     <h3>Server Side Rendering</h3>
                     <p>with API calls</p>
