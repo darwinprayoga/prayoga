@@ -33,11 +33,11 @@ export default function Share({ data }: { data: any }) {
 
 
     return (
-        <div class={tw`fixed bottom-0 left-0 right-0 m-4`}>
+        <div class={tw`fixed inset-0 m-4 flex flex-col`}>
             <Head title={decodeURI(data.username) + `'s Pokemon`} />
 
-            <section class={tw`flex mb-32 justify-center items-center flex-col`}>
-                <img class={tw`h-[300px] mb-6 animate-bounce`} src={data.sprites.other.home.front_default} />
+            <section class={tw`flex flex-col w-full h-full my-auto justify-center items-center`}>
+                <img class={tw`h-[350px] mb-6 animate-bounce`} src={data.sprites.other.home.front_default} />
                 <h2 class={tw`mb-4`}>Congrats! @{decodeURI(data.username)}</h2>
                 <p>you got <b class={tw`tracking-wider`}>{data.name}</b>'s Pokemon</p>
             </section>
