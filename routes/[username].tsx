@@ -5,10 +5,6 @@ import { Handlers, PageProps } from '$fresh/server.ts';
 import array from "./api/pokedata.json" assert { type: "json" };
 import Share from '../islands/Share.tsx';
 
-Deno.env.set("FRESH_ENV_POKEAPI_URL", "https://pokeapi.co/api/v2/pokemon")
-Deno.env.set("FRESH_ENV_RAPIDAPI_KEY", "b93225fcddmshc2aa39b60b562adp14b4efjsn88f900d37621")
-Deno.env.set("FRESH_ENV_RAPIDAPI_HOST", "web-capture1.p.rapidapi.com")
-
 
 
 export interface Pokemon {
