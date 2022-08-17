@@ -1,16 +1,26 @@
 /** @jsx h */
 import { h } from "preact";
+import { useEffect } from "preact/hooks";
 
 
 
 export default function Head(props: { title?: string }) {
+
+    useEffect(() => {
+
+        addEventListener('contextmenu', (e) => {
+            e.preventDefault()
+        })
+
+    }, [])
+
     return (
         <head>
 
             <title>{props.title || 'Darwin Prayoga'}</title>
 
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-            
+
             <link rel="shortcut icon" href="/favicon.ico" />
 
             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>

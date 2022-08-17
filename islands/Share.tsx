@@ -37,7 +37,7 @@ export default function Share({ data }: { data: any }) {
             <Head title={decodeURI(data.username) + `'s Pokemon`} />
 
             <section class={tw`flex flex-col w-full h-full my-auto justify-center items-center`}>
-                <img class={tw`h-[350px] mb-6 animate-bounce`} src={data.sprites.other.home.front_default} />
+                <img onClick={() => open(`https://www.pokemon.com/us/pokedex/${data.name}`)} class={tw`pointer h-[350px] mb-6 animate-bounce`} src={data.sprites.other.home.front_default} />
                 <h2 class={tw`mb-4`}>Congrats! @{decodeURI(data.username)}</h2>
                 <p>you got <b class={tw`tracking-wider`}>{data.name}</b>'s Pokemon</p>
             </section>
