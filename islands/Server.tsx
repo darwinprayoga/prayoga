@@ -23,8 +23,9 @@ export default function Server(props: { onBack(): void }) {
             </div>
 
             <div class={tw`flex w-full mb-6 mt-32 max-w-screen-md`}>
-                <input onChange={(e) => setType(e.currentTarget.value)} class={tw`rounded-r-none`} type='text' placeholder='Enter your name' />
-                <button onClick={() => location.href = `/${type}`} class={tw`bg-darkTrans font-bold text-${_color}-600 tracking-wider pr-2 rounded-r-lg focus:outline-none`}>try</button>
+                <div class={tw`bg-darkTrans text-white pl-3 py-1 rounded-l-lg`}><h3>@</h3></div>
+                <input onChange={(e) => setType(e.currentTarget.value)} class={tw`lowercase rounded-none pl-1`} type='text' placeholder='Username' />
+                <button onClick={() => location.href = `/${type.toLowerCase()}`} class={tw`bg-darkTrans font-bold text-${_color}-600 tracking-wider pr-2 rounded-r-lg focus:outline-none`}>try</button>
             </div>
 
             <section class={tw`flex justify-start w-full`}>

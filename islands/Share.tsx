@@ -36,9 +36,9 @@ export default function Share({ data }: { data: any }) {
         <div class={tw`fixed bottom-0 left-0 right-0 m-4`}>
             <Head title={decodeURI(data.username) + `'s Pokemon`} />
 
-            <section class={tw`flex mb-20 justify-center items-center flex-col`}>
-                <img class={tw`h-[300px] mb-6 animate-bounce`} src={data.sprites.other.dream_world.front_default} />
-                <h1 class={tw`mb-4`}>Congrats! {decodeURI(data.username)}</h1>
+            <section class={tw`flex mb-32 justify-center items-center flex-col`}>
+                <img class={tw`h-[300px] mb-6 animate-bounce`} src={data.sprites.other.home.front_default} />
+                <h2 class={tw`mb-4`}>Congrats! @{decodeURI(data.username)}</h2>
                 <p>you got <b class={tw`tracking-wider`}>{data.name}</b>'s Pokemon</p>
             </section>
 
