@@ -1,7 +1,7 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from '@twind';
-import { theDomain } from "../routes/index.tsx";
+import { theDomain } from "./Sync.tsx";
 
 export default function Meter() {
     return (
