@@ -2,7 +2,7 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from "@twind";
-import Head from "./Sync.tsx";
+import Head from "../components/Sync.tsx";
 import { theDomain } from "../routes/index.tsx";
 
 export default function Share({ data }: { data: any }) {

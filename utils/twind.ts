@@ -82,14 +82,14 @@ export const config: Configuration = {
         fontStyle: "normal",
         fontWeight: 400,
         src:
-          `local('Gilroy-Bold'), url('https://fonts.cdnfonts.com/s/16219/Gilroy-Bold.woff') format('woff')`,
+          `local('Gilroy-Bold'), url('/font/Gilroy-Bold.woff') format('woff')`,
       },
       {
         fontFamily: "Gilroy-Medium",
         fontStyle: "normal",
         fontWeight: 400,
         src:
-          `local('Gilroy-Medium'), url('https://fonts.cdnfonts.com/s/16219/Gilroy-Medium.woff') format('woff')`,
+          `local('Gilroy-Medium'), url('/font/Gilroy-Medium.woff') format('woff')`,
       },
     ],
 

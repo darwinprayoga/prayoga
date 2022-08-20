@@ -4,7 +4,7 @@ import { Handlers, PageProps } from '$fresh/server.ts';
 import { app } from '@firebase';
 import { doc, getDoc, getFirestore, setDoc } from 'firebase/firestore';
 
-import Share from '../components/Share.tsx';
+import Share from '../islands/Share.tsx';
 
 
 
