@@ -7,8 +7,9 @@ import * as $1 from "./routes/_404.tsx";
 import * as $2 from "./routes/_500.tsx";
 import * as $3 from "./routes/api/joke.ts";
 import * as $4 from "./routes/fastmeal.tsx";
-import * as $5 from "./routes/index.tsx";
-import * as $6 from "./routes/sickkfashion.tsx";
+import * as $5 from "./routes/history.tsx";
+import * as $6 from "./routes/index.tsx";
+import * as $7 from "./routes/sickkfashion.tsx";
 import * as $$0 from "./islands/Card.tsx";
 import * as $$1 from "./islands/Design.tsx";
 import * as $$2 from "./islands/Fashion.tsx";
@@ -19,10 +20,13 @@ import * as $$6 from "./islands/Intro.tsx";
 import * as $$7 from "./islands/Journey.tsx";
 import * as $$8 from "./islands/Meter.tsx";
 import * as $$9 from "./islands/Nav.tsx";
-import * as $$10 from "./islands/Page.tsx";
-import * as $$11 from "./islands/Server.tsx";
-import * as $$12 from "./islands/Share.tsx";
-import * as $$13 from "./islands/Sync.tsx";
+import * as $$10 from "./islands/Option.tsx";
+import * as $$11 from "./islands/Page.tsx";
+import * as $$12 from "./islands/Pokedata.tsx";
+import * as $$13 from "./islands/Pricing.tsx";
+import * as $$14 from "./islands/Server.tsx";
+import * as $$15 from "./islands/Share.tsx";
+import * as $$16 from "./islands/Sync.tsx";
 
 const manifest = {
   routes: {
@@ -31,8 +35,9 @@ const manifest = {
     "./routes/_500.tsx": $2,
     "./routes/api/joke.ts": $3,
     "./routes/fastmeal.tsx": $4,
-    "./routes/index.tsx": $5,
-    "./routes/sickkfashion.tsx": $6,
+    "./routes/history.tsx": $5,
+    "./routes/index.tsx": $6,
+    "./routes/sickkfashion.tsx": $7,
   },
   islands: {
     "./islands/Card.tsx": $$0,
@@ -45,10 +50,13 @@ const manifest = {
     "./islands/Journey.tsx": $$7,
     "./islands/Meter.tsx": $$8,
     "./islands/Nav.tsx": $$9,
-    "./islands/Page.tsx": $$10,
-    "./islands/Server.tsx": $$11,
-    "./islands/Share.tsx": $$12,
-    "./islands/Sync.tsx": $$13,
+    "./islands/Option.tsx": $$10,
+    "./islands/Page.tsx": $$11,
+    "./islands/Pokedata.tsx": $$12,
+    "./islands/Pricing.tsx": $$13,
+    "./islands/Server.tsx": $$14,
+    "./islands/Share.tsx": $$15,
+    "./islands/Sync.tsx": $$16,
   },
   baseUrl: import.meta.url,
 };
