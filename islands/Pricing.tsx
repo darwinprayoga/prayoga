@@ -20,6 +20,8 @@ export default function Pricing(props: { onBack(): void }) {
 
     const [gSeo, setGSeo] = useState(false)
     const [gAuth, setGAuth] = useState(false)
+    const [gAnalytics, setGAnalytics] = useState(false)
+    const [gPwa, setGPwa] = useState(false)
 
     const per = integrity == 1 ? 'actFilled' : 'actBorder'
     const exp = integrity == 2 ? 'actFilled' : 'actBorder'
@@ -138,11 +140,17 @@ export default function Pricing(props: { onBack(): void }) {
                                 <p>Google Console</p>
                                 <menu class={tw`my-2 w-full`}>
                                     <button onClick={() => {
+                                        setGPwa(false)
+                                        setGAnalytics(false)
                                         setGAuth(false)
                                         setGSeo(false)
-                                    }} class={tw`${!gAuth && !gSeo ? 'btnFilled' : 'btnBorder'}`}><p>null</p></button>
+                                    }} class={tw`${!gAuth && !gSeo && !gAnalytics && !gPwa ? 'btnFilled' : 'btnBorder'}`}><p>null</p></button>
                                     <button onClick={() => setGSeo(!gSeo)} class={tw`${gSeo ? 'btnFilled' : 'btnBorder'}`}><p>SEO</p></button>
                                     <button onClick={() => setGAuth(!gAuth)} class={tw`${gAuth ? 'btnFilled' : 'btnBorder'}`}><p>Authentication</p></button>
+                                </menu>
+                                <menu class={tw`my-2 w-full`}>
+                                    <button onClick={() => setGAnalytics(!gAnalytics)} class={tw`${gAnalytics ? 'btnFilled' : 'btnBorder'}`}><p>Analytics</p></button>
+                                    <button onClick={() => setGPwa(!gPwa)} class={tw`${gPwa ? 'btnFilled' : 'btnBorder'}`}><p>PWA</p></button>
                                 </menu>
                             </menuitem>
 
