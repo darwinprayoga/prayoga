@@ -1,7 +1,7 @@
 import { IS_BROWSER } from "$fresh/runtime.ts";
 import { apply, Configuration, setup } from "twind";
 
-import { useOs } from "../islands/Sync.tsx";
+import { useOs } from "../components/Sync.tsx";
 
 export * from "twind";
 
@@ -38,27 +38,33 @@ export const config: Configuration = {
         hint: "rgba(235, 235, 245, 0.6)",
         stabilo: "#32D74B",
         blue: {
-          600: '#007AFF'
-        }
+          600: "#007AFF",
+        },
       },
     },
   },
 
   plugins: {
     btnPlain:
-      `flex py-3 px-6 justify-center font-bold tracking-wider rounded-xl text-${_color}-600 focus:outline-none`,
-    btnFilled: `btnPlain bg-${_color}(600 hover:700) text-white`,
-    btnBorder: `btnPlain border(${_color}-600 2)`,
+      `flex py-3 px-6 justify-center font-bold tracking-wider rounded-xl text-${_color}-600 focus:outline-none border(transparent 2)`,
+    btnFilled:
+      `flex py-3 px-6 justify-center font-bold tracking-wider rounded-xl focus:outline-none border(transparent 2) bg-${_color}(600 hover:700) text-white`,
+    btnBorder:
+      `flex py-3 px-6 justify-center font-bold tracking-wider rounded-xl text-${_color}-600 focus:outline-none border(${_color}-600 2)`,
     actFilled:
-      `flex p-2 rounded-xl bg-${_color}(600 hover:700) text-white focus:outline-none`,
-    cirPlain: `flex p-2 rounded-full text-white focus:outline-none border(transparent 2)`,
-    cirBorder: `flex p-2 rounded-full text-white focus:outline-none border(${_color}-600 2)`,
+      `flex p-2 rounded-xl bg-${_color}(600 hover:700) text-white focus:outline-none border(transparent 2)`,
+    actBorder:
+      `flex p-2 rounded-xl text-white focus:outline-none bg-transparent border(${_color}-600 2)`,
+    cirPlain:
+      `flex p-2 rounded-full text-white focus:outline-none border(transparent 2)`,
+    cirBorder:
+      `flex p-2 rounded-full text-white focus:outline-none border(${_color}-600 2)`,
     card:
       `grid divide-y divide-darkTrans bg-darkTrans p-4 rounded-2xl shadow-lg`,
     divider: `w-full h-[1px] bg-darkTrans`,
     active: `border(${_color}-600 2)`,
     pointer: `${_mobile() ? "cursor-auto" : "cursor-pointer"}`,
-    modal: `fixed bg-darkModal inset-0 flex justify-center items-center`
+    modal: `fixed bg-darkModal inset-0 flex justify-center items-center`,
   },
 
   preflight: {
@@ -76,14 +82,14 @@ export const config: Configuration = {
         fontStyle: "normal",
         fontWeight: 400,
         src:
-          `local('Gilroy-Bold'), url('https://fonts.cdnfonts.com/s/16219/Gilroy-Bold.woff') format('woff')`,
+          `local('Gilroy-Bold'), url('/font/Gilroy-Bold.woff') format('woff')`,
       },
       {
         fontFamily: "Gilroy-Medium",
         fontStyle: "normal",
         fontWeight: 400,
         src:
-          `local('Gilroy-Medium'), url('https://fonts.cdnfonts.com/s/16219/Gilroy-Medium.woff') format('woff')`,
+          `local('Gilroy-Medium'), url('/font/Gilroy-Medium.woff') format('woff')`,
       },
     ],
 

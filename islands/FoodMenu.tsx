@@ -3,7 +3,7 @@
 import { h } from "preact";
 import { StateUpdater, useEffect, useState } from "preact/hooks";
 import { tw } from '@twind';
-import { Close } from "./Icons.tsx";
+import { Close } from "../components/Icons.tsx";
 
 
 

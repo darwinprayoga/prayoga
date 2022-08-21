@@ -2,7 +2,8 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from "@twind";
-import Head from "./Sync.tsx";
+import Head from "../components/Sync.tsx";
+import { theDomain } from "../components/Sync.tsx";
 
 export default function Share({ data }: { data: any }) {
 
@@ -16,14 +17,14 @@ export default function Share({ data }: { data: any }) {
             }
         }
 
-        const blob = await fetch(`https://web-capture1.p.rapidapi.com/capture?url=https://prayoga.deno.dev/${data.username}&width=549&height=978&disableAnimations=true`, options)
+        const blob = await fetch(`https://web-capture1.p.rapidapi.com/capture?url=${theDomain}${data.username}&width=549&height=978&disableAnimations=true`, options)
             .then(res => res.blob())
 
         const filesArray: File[] = [new File([blob], `${data.username}.png`, { type: blob.type, lastModified: new Date().getTime() })]
         const shareData = {
             files: filesArray,
             title: `${data.username}'s Pokemon is ${data.name}'`,
-            text: `get your own by clicking this url: https://prayoga.deno.dev`,
+            text: `get your own by clicking this url: ${theDomain}`,
         }
 
         navigator.share(shareData as any).catch((e) => Error(e))
@@ -42,10 +43,15 @@ export default function Share({ data }: { data: any }) {
                 <p>you got <b class={tw`tracking-wider`}>{data.name}</b>'s Pokemon</p>
             </section>
 
-            <menuitem class={tw`items-center`}>
-                <button onClick={onShare} class={tw`btnFilled w-full max-w-screen-md`}>Share</button>
-                <button onClick={() => location.href = '/'} class={tw`btnPlain w-full max-w-screen-md`}>Get More</button>
-            </menuitem>
+            <section class={tw`flex justify-center`}>
+                <menuitem class={tw`w-full max-w-screen-md`}>
+                    <button onClick={onShare} class={tw`btnFilled w-full max-w-screen-md`}>Share</button>
+                    <menu class={tw`w-full`}>
+                        <button onClick={() => location.href = '/history'} class={tw`flex py-3 px-6 justify-center font-bold tracking-wider rounded-xl text-default focus:outline-none border(transparent 2)`}>History</button>
+                        <button onClick={() => location.href = '/'} class={tw`btnPlain`}>Get More</button>
+                    </menu>
+                </menuitem>
+            </section>
         </div>
     )
 }

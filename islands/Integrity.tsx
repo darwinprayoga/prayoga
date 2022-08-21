@@ -2,8 +2,8 @@
 import { h } from "preact";
 import { tw, _color } from '@twind';
 import { useState } from 'preact/hooks';
-import { Next } from "./Icons.tsx";
-import Nav from "./Nav.tsx";
+import { Next } from "../components/Icons.tsx";
+import Nav from "../components/Nav.tsx";
 
 
 
@@ -69,7 +69,7 @@ export default function Integrity(props: { onNext(): void, onBack(): void }) {
                             </menu>
                             <div class={tw`flex justify-between items-center py-2`}>
                                 <sub>: Client App / User Access Usage</sub>
-                                <menu class={tw` justify-end gap-3`}>
+                                <menu class={tw`justify-end gap-3`}>
                                     <img src="/p1.svg" class={tw`w-5`} />
                                     <img src="/p2.png" class={tw`w-5`} />
                                     <img src="/p3.png" class={tw`w-5`} />
@@ -105,7 +105,7 @@ export default function Integrity(props: { onNext(): void, onBack(): void }) {
                             </menu>
                             <div class={tw`flex justify-between items-center py-2`}>
                                 <sub>: For Consumer & Branding Platform</sub>
-                                <menu class={tw` justify-end gap-3`}>
+                                <menu class={tw`justify-end gap-3`}>
                                     <img src="/e1.png" class={tw`w-5`} />
                                     <img src="/e2.svg" class={tw`w-5`} />
                                     <img src="/e3.png" class={tw`w-5`} />

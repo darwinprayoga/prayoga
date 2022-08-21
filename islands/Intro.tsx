@@ -2,7 +2,7 @@
 import { h } from "preact";
 import { tw } from '@twind';
 import { useState } from 'preact/hooks';
-import { Bottom, Next } from './Icons.tsx';
+import { Bottom, Next } from '../components/Icons.tsx';
 
 
 

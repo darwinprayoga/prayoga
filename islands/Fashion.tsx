@@ -1,7 +1,7 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from '@twind';
-import { Close } from "./Icons.tsx";
+import { Close } from "../components/Icons.tsx";
 
 export default function Fashion(props: { onBack?(): void }) {
     return (
