@@ -2,8 +2,8 @@
 import { h } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { tw, _color } from '@twind';
-import { Branch, Download, Github, Instagram, Linkedin, Right, Star, Twitter } from "../components/Icons.tsx";
-import { useOs } from "../components/Sync.tsx";
+import { Branch, Download, Github, Instagram, Linkedin, Right, Star, Twitter } from "./Icons.tsx";
+import { useOs } from "./Sync.tsx";
 
 
 

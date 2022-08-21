@@ -1,5 +1,4 @@
 import { initializeApp } from "firebase/app";
-export * from "firebase";
 
 const config = {
   apiKey: Deno.env.get("apiKey"),

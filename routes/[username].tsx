@@ -49,19 +49,17 @@ export const handler: Handlers<Pokemon | null> = {
             }
         } else {
 
-            const respon = await fetch(`${Deno.env.get("FRESH_ENV_POKEAPI_URL")}/${random}/`, { method: 'GET' })
-            const data: Pokemon = await respon.json()
-
             await setDoc(doc(fire, 'pokedata', username), {
-                image: data.sprites.other.home.front_default,
                 index: random,
-                pokemon: data.name,
                 time: new Date().toISOString()
             })
+
+            const respon = await fetch(`${Deno.env.get("FRESH_ENV_POKEAPI_URL")}/${random}/`, { method: 'GET' })
 
             if (respon.status === 404) {
                 return ctx.render(null)
             } else {
+                const data: Pokemon = await respon.json()
                 data.username = username
                 data.apiKey = Deno.env.get("FRESH_ENV_RAPIDAPI_KEY")
                 data.apiHost = Deno.env.get("FRESH_ENV_RAPIDAPI_HOST")

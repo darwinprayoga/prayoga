@@ -2,8 +2,8 @@
 import { h } from "preact";
 import { tw, _color } from '@twind';
 import { useState } from 'preact/hooks';
-import { Next } from "../components/Icons.tsx";
-import Nav from "../components/Nav.tsx";
+import { Next } from "./Icons.tsx";
+import Nav from "./Nav.tsx";
 import FoodMenu from "./FoodMenu.tsx";
 import Fashion from "./Fashion.tsx";
 

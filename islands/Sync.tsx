@@ -2,8 +2,6 @@
 import { h } from "preact";
 import { useEffect } from "preact/hooks";
 
-export const theDomain = 'https://prayoga.deno.dev/'
-
 
 
 export default function Head(props: { title?: string }) {
