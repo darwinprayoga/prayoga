@@ -8,7 +8,7 @@ export default function Meter() {
         <div class={tw`flex w-full max-w-screen-md mx-4 flex-col justify-center text-center items-center bg-dark rounded-2xl shadow-lg`}>
             <section class={tw`flex items-center my-4`}>
                 <h1>PageSpeed</h1>
-                <img onClick={() => open(`https://pagespeed.web.dev/report?url=${theDomain}`)} src='/pagespeed.png' class={tw`pointer ml-4 w-8 h-8`} />
+                <img draggable={false} onClick={() => open(`https://pagespeed.web.dev/report?url=${theDomain}`)} src='/pagespeed.png' class={tw`pointer ml-4 w-8 h-8`} />
             </section>
 
             <div class={tw`divider`} />

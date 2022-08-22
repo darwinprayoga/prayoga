@@ -47,7 +47,7 @@ export default function Journey(props: { onNext(): void, onBack(): void }) {
 
             <main>
                 <nav class={tw`flex justify-between items-center`}>
-                    <img onClick={props.onBack} class={tw`w-10 h-10 pointer`} src="/logo.png" />
+                    <img draggable={false} onClick={props.onBack} class={tw`w-10 h-10 pointer`} src="/logo.png" />
                     <button onClick={() => location.href = '/resume.pdf'} class={tw`focus:outline-none tracking-wider bg-default flex gap-2 text-darkTrans py-2 px-4 shadow-inner rounded-xl`}><Download class={tw`fill-current w-5`} />Resume</button>
                 </nav>
 
@@ -84,7 +84,7 @@ export default function Journey(props: { onNext(): void, onBack(): void }) {
                     </div>
 
                     <div class={tw`col-span-1 ml-2`}>
-                        <img onClick={() => setContact(!contact)} class={tw`pointer w-full h-full bg-${_color}-600 shadow-lg rounded-[32px]`} src='/profile.png' />
+                        <img draggable={false} onClick={() => setContact(!contact)} class={tw`pointer w-full h-full bg-${_color}-600 shadow-lg rounded-[32px]`} src='/profile.png' />
                     </div>
                 </section>
             </main>
@@ -100,7 +100,7 @@ export default function Journey(props: { onNext(): void, onBack(): void }) {
                 <h2 class={tw`font-bold mb-6 tracking-wider text-default`}>Projects</h2>
                 <div class={tw`flex mb-6 justify-between items-center bg-white p-4 rounded-2xl w-full`}>
                     <menu class={tw`justify-start items-center`}>
-                        <img src='/biofip.png' class={tw`w-12 mr-4`} />
+                        <img draggable={false} src='/biofip.png' class={tw`w-12 mr-4`} />
                         <menuitem class={tw`gap-0`}>
                             <h3 class={tw`text-dark`}>Biofip</h3>
                             <p>Self-branding based on NFT by web 3.0</p>
@@ -110,7 +110,7 @@ export default function Journey(props: { onNext(): void, onBack(): void }) {
                 </div>
                 <div class={tw`flex mb-6 justify-between items-center bg-white p-4 rounded-2xl w-full`}>
                     <menu class={tw`justify-start items-center`}>
-                        <img src='/logo.png' class={tw`w-12 mr-4`} />
+                        <img draggable={false} src='/logo.png' class={tw`w-12 mr-4`} />
                         <menuitem class={tw`gap-0`}>
                             <h3 class={tw`text-dark`}>Prayoga</h3>
                             <p>Specializing execute web design & code for any demand</p>
@@ -124,7 +124,7 @@ export default function Journey(props: { onNext(): void, onBack(): void }) {
                 </div>
                 <div class={tw`flex mb-6 justify-between items-center bg-white p-4 rounded-2xl w-full`}>
                     <menu class={tw`justify-start items-center`}>
-                        <img src='/victory.png' class={tw`w-12 mr-4`} />
+                        <img draggable={false} src='/victory.png' class={tw`w-12 mr-4`} />
                         <menuitem class={tw`gap-0`}>
                             <h3 class={tw`text-dark`}>Victory International</h3>
                             <p>Global financial investment and trading facilities, <sub>as Digital Marketing</sub></p>
@@ -134,7 +134,7 @@ export default function Journey(props: { onNext(): void, onBack(): void }) {
                 </div>
                 <div class={tw`flex mb-16 justify-between items-center bg-white p-4 rounded-2xl w-full`}>
                     <menu class={tw`justify-start items-center`}>
-                        <img src='/ibf.png' class={tw`w-12 mr-4`} />
+                        <img draggable={false} src='/ibf.png' class={tw`w-12 mr-4`} />
                         <menuitem class={tw`gap-0`}>
                             <h3 class={tw`text-dark`}>International Business</h3>
                             <p>Foreign exchange, stock and commodity index provider, <sub>as Human Resource Development</sub></p>

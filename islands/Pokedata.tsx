@@ -14,7 +14,7 @@ export default function Pokedata({ data }: { data: any }) {
             <Head title="Poke`data ☄️" />
 
             <nav onClick={() => location.href = '/'} class={tw`pointer flex gap-2 p-4 justify-start items-center`}>
-                <img class={tw`w-10 h-10`} src="/logo.png" />
+                <img draggable={false} class={tw`w-10 h-10`} src="/logo.png" />
                 <h3>Prayoga</h3>
             </nav>
 
@@ -26,7 +26,7 @@ export default function Pokedata({ data }: { data: any }) {
 
             </section>
 
-            <div class={tw`overflow-auto divide-y divide-darkTrans flex flex-col bg-dark shadow-lg p-4 w-full h-full pb-80`}>
+            <div class={tw`overflow-auto divide-y divide-darkTrans flex flex-col bg-dark shadow-lg p-4 w-full h-full pb-60`}>
 
                 {data.map((x: any, i: number) => (
                     <menuitem class={tw`py-4`} key={i}>
@@ -35,7 +35,7 @@ export default function Pokedata({ data }: { data: any }) {
                             <sub>at {new Date(x.time).toLocaleDateString()} {new Date(x.time).toLocaleTimeString()}</sub>
                         </menu>
                         <menu class={tw`justify-between w-full`}>
-                            <img class={tw`pointer w-20`} onClick={() => location.href = `/${x.username}`} src={x.image} />
+                            <img draggable={false} class={tw`pointer w-20`} onClick={() => location.href = `/${x.username}`} src={x.image} />
                             <sub>{x.pokemon}</sub>
                         </menu>
                     </menuitem>

@@ -29,7 +29,7 @@ export default function Card() {
             </section>
             <div class={tw`divider`} />
 
-            <img class={tw`w-20 md:w-24 rounded-full my-6`} src='/profile.png' />
+            <img draggable={false} class={tw`w-20 md:w-24 rounded-full my-6`} src='/profile.png' />
 
             <section class={tw`mb-10`}>
                 <h2>Darwin Prayoga</h2>

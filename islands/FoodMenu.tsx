@@ -41,7 +41,7 @@ export default function FoodMenu(props: { onBack?(): void }) {
     const Item = (props: { name: string, price: number, order: number, setOrder: StateUpdater<number>, option: string, setOption: StateUpdater<string>, src: string }) => {
         return (
             <div class={tw`grid grid-cols-5 py-4 w-full`}>
-                <img onClick={() => setHero({ src: props.src })} class={tw`pointer w-full rounded-2xl col-span-1`} src={props.src} />
+                <img draggable={false} onClick={() => setHero({ src: props.src })} class={tw`pointer w-full rounded-2xl col-span-1`} src={props.src} />
                 <menuitem class={tw`justify-center pl-4 col-span-3`}>
                     <section class={tw`flex w-full justify-between`}>
                         <h3>{props.name}</h3>
@@ -55,7 +55,7 @@ export default function FoodMenu(props: { onBack?(): void }) {
                     <button onClick={() => props.setOrder(props.order + 1)} class={tw`flex px-2 justify-center font-bold text-blue-600 focus:outline-none`}>+</button>
                 </menu>
 
-                {hero && <div onClick={() => setHero(false)} class={tw`modal`}><img class={tw`pointer w-full max-w-screen-md`} src={hero.src} /></div>}
+                {hero && <div onClick={() => setHero(false)} class={tw`modal`}><img draggable={false} class={tw`pointer w-full max-w-screen-md`} src={hero.src} /></div>}
             </div>
         )
     }
@@ -68,7 +68,7 @@ export default function FoodMenu(props: { onBack?(): void }) {
 
         return (
             <div class={tw`grid grid-cols-5 py-4 w-full`}>
-                <img onClick={() => setHero({ src: props.src })} class={tw`pointer h-full rounded-2xl col-span-1`} src={props.src} />
+                <img draggable={false} onClick={() => setHero({ src: props.src })} class={tw`pointer h-full rounded-2xl col-span-1`} src={props.src} />
                 <menuitem class={tw`justify-center pl-4 col-span-3`}>
                     <section class={tw`flex w-full justify-between`}>
                         <h3>{props.name}</h3>
@@ -80,7 +80,7 @@ export default function FoodMenu(props: { onBack?(): void }) {
                     <h1>{props.order}</h1>
                 </menu>
 
-                {hero && <div onClick={() => setHero(false)} class={tw`modal`}><img class={tw`pointer w-full max-w-screen-md`} src={hero.src} /></div>}
+                {hero && <div onClick={() => setHero(false)} class={tw`modal`}><img draggable={false} class={tw`pointer w-full max-w-screen-md`} src={hero.src} /></div>}
             </div>
         )
     }

@@ -48,10 +48,10 @@ export default function Pricing(props: { onBack(): void }) {
                                     <button onClick={() => setIntegrity(1)} class={tw`${per}`}><h2>⚡</h2></button>
                                     <h3>Performance</h3>
                                     <menu class={tw`justify-end gap-3`}>
-                                        <img src="/p1.svg" class={tw`w-5`} />
-                                        <img src="/p2.png" class={tw`w-5`} />
-                                        <img src="/p3.png" class={tw`w-5`} />
-                                        <img src="/p4.svg" class={tw`w-5`} />
+                                        <img draggable={false} src="/p1.svg" class={tw`w-5`} />
+                                        <img draggable={false} src="/p2.png" class={tw`w-5`} />
+                                        <img draggable={false} src="/p3.png" class={tw`w-5`} />
+                                        <img draggable={false} src="/p4.svg" class={tw`w-5`} />
                                     </menu>
                                 </menuitem>
                             </section>
@@ -61,10 +61,10 @@ export default function Pricing(props: { onBack(): void }) {
                                     <button onClick={() => setIntegrity(2)} class={tw`${exp}`}><h2>✨</h2></button>
                                     <h3>Experience</h3>
                                     <menu class={tw`justify-end gap-3`}>
-                                        <img src="/e1.png" class={tw`w-5`} />
-                                        <img src="/e2.svg" class={tw`w-5`} />
-                                        <img src="/e3.png" class={tw`w-5`} />
-                                        <img src="/e4.png" class={tw`w-5`} />
+                                        <img draggable={false} src="/e1.png" class={tw`w-5`} />
+                                        <img draggable={false} src="/e2.svg" class={tw`w-5`} />
+                                        <img draggable={false} src="/e3.png" class={tw`w-5`} />
+                                        <img draggable={false} src="/e4.png" class={tw`w-5`} />
                                     </menu>
                                 </menuitem>
                             </section>

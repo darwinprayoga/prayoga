@@ -4,7 +4,7 @@ import { tw } from "@twind";
 
 export default function Icons(props: { leftIcon?: string, rightIcon?: string, classIcon?: string, width: string, children: string }) {
     return (
-        <button class={tw`flex bg-blue(600 hover:700) font-bold tracking-wider rounded-xl text-white focus:outline-none justify-between items-center w-full`}><img class={props.classIcon} src={props.leftIcon} width={props.width} />{props.children}<img class={props.classIcon} src={props.rightIcon} width={props.width} /></button>
+        <button class={tw`flex bg-blue(600 hover:700) font-bold tracking-wider rounded-xl text-white focus:outline-none justify-between items-center w-full`}><img draggable={false} class={props.classIcon} src={props.leftIcon} width={props.width} />{props.children}<img draggable={false} class={props.classIcon} src={props.rightIcon} width={props.width} /></button>
     )
 }
 

@@ -2,23 +2,25 @@
 /** @jsx h */
 import { h } from "preact";
 import { Handlers, PageProps } from '$fresh/server.ts';
-import { app } from '@firebase';
-import { collection, getDocs, getFirestore, orderBy, query } from 'firebase/firestore';
+import { supabase } from '@supabase'
 
 import Pokedata from '../islands/Pokedata.tsx';
 
 
 
-const fire = getFirestore(app)
-
 export const handler: Handlers<any | null> = {
     async GET(_, ctx) {
 
-        const q = query(collection(fire, 'pokedata'), orderBy('time'))
-        const db = await getDocs(q)
+        const { data, error } = await supabase
+            .from('pokedata')
+            .select('*')
 
-        const data = db.docs.map(x => ({ ...x.data(), username: x.id }))
-        return ctx.render(data)
+        if (data) {
+            return ctx.render(data)
+        } else {
+            console.error(error)
+            return ctx.render(null)
+        }
 
     },
 };
