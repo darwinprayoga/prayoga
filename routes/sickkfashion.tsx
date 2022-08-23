@@ -6,7 +6,7 @@ import Head from "../components/Sync.tsx";
 export default function SickkFashion() {
     return (
         <div>
-            <Head title="SickkFashion by @darwinprayoga" />
+            <Head title="SickkFashion 👟 by @darwinprayoga" />
             <Fashion />
         </div>
     )

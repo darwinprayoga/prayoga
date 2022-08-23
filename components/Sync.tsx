@@ -10,6 +10,12 @@ export default function Head(props: { title?: string }) {
 
     useEffect(() => {
 
+        const inputElem = document.querySelector('input');
+
+        inputElem?.addEventListener('input', () => {
+            console.log(inputElem.value)
+        })
+
         addEventListener('contextmenu', (e) => {
             e.preventDefault()
         })

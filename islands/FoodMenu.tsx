@@ -47,7 +47,7 @@ export default function FoodMenu(props: { onBack?(): void }) {
                         <h3>{props.name}</h3>
                         <h3>${props.price}</h3>
                     </section>
-                    <input defaultValue={props.option} onChange={(e) => props.setOption(e.currentTarget.value)} class={tw`w-full bg-hint placeholder-darkTrans`} type="text" placeholder="option" />
+                    <input defaultValue={props.option} onKeyUp={(e) => props.setOption(e.currentTarget.value)} class={tw`w-full bg-hint placeholder-darkTrans`} type="text" placeholder="option" />
                 </menuitem>
                 <menu class={tw`pl-4 justify-between`}>
                     <button onClick={() => props.order > 0 && props.setOrder(props.order - 1)} class={tw`flex px-2 justify-center font-bold text-red-600 focus:outline-none`}>-</button>
