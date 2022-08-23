@@ -39,6 +39,7 @@ export const config: Configuration = {
         stabilo: "#32D74B",
         blue: {
           600: "#007AFF",
+          700: "#0075F5"
         },
       },
     },

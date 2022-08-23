@@ -27,6 +27,50 @@ export default function Pricing(props: { onBack?(): void }) {
     const per = integrity == 1 ? 'actFilled' : 'actBorder'
     const exp = integrity == 2 ? 'actFilled' : 'actBorder'
 
+
+
+    const body = encodeURIComponent(
+        `
+Integrity: ${integrity == 1 ? 'Performance' : 'Experience'},
+
+Domain: {
+
+    status: ${hadDomain ? 'Already' : 'Request'},
+    url: ${domain}
+
+},
+
+Design: {
+
+    status: ${cusDesign == 1 ? 'Already' : 'Request'},
+    url: ${refDesign}
+
+},
+
+Number Of Page: ${numPage == 1 ? '3-5' : ''}${numPage == 2 ? '6-10' : ''}${numPage == 3 ? '11-20' : ''},
+
+Database: ${dbCollection == 1 ? 'null' : ''}${dbCollection == 2 ? '1-3' : ''}${dbCollection == 3 ? '4-6' : ''},
+
+APIs: ${apis == 1 ? 'null' : ''}${apis == 2 ? '10' : ''}${apis == 3 ? '20' : ''},
+
+Google Console: {
+
+    ${!gAuth && !gSeo && !gAnalytics && !gPwa ? 'null' : ''}${gSeo ? 'Search Console     ' : ''}${gAuth ? 'Authentication     ' : ''}${gAnalytics ? 'Analytics     ' : ''}${gPwa ? 'Progressive Web App' : ''}
+
+}
+        `
+    )
+
+
+
+    const email = () => {
+        open(`mailto:darwin.prayoga13@gmail.com?subject=${encodeURIComponent(domain)}&body=${body}`)
+    }
+
+
+
+
+
     return (
         <div>
 
@@ -84,7 +128,7 @@ export default function Pricing(props: { onBack?(): void }) {
 
                             <menuitem class={tw`p-4`}>
                                 <p>{hadDomain ? 'Type your preparation domain' : 'Each domains name has a different price'}</p>
-                                <input onKeyUp={(e) => setDomain(e.currentTarget.value)} type="url" placeholder="example.com" />
+                                <input onKeyUp={(e) => setDomain(e.currentTarget.value)} type="url" name="url" placeholder="example.com" />
                                 <div class={tw`flex w-full justify-between items-center py-2`}>
                                     <sub onClick={() => setHadDomain(!hadDomain)} class={tw`pointer text-${_color}-600`}>{hadDomain ? 'Looking for a new domain!' : 'Already had a domain?'}</sub>
                                     <sub>.com .io .app</sub>
@@ -107,13 +151,13 @@ export default function Pricing(props: { onBack?(): void }) {
                                     <button onClick={() => setCusDesign(1)} class={tw`${cusDesign == 1 ? 'btnFilled' : 'btnBorder'}`}><p>Already Concept</p></button>
                                     <button onClick={() => setCusDesign(2)} class={tw`${cusDesign == 2 ? 'btnFilled' : 'btnBorder'}`}><p>Request</p></button>
                                 </menu>
-                                {cusDesign == 1 && <input onKeyUp={(e) => setRefDesign(e.currentTarget.value)} placeholder="url reference" class={tw`mb-2 w-full`} />}
+                                {cusDesign == 1 && <input type="url" name="url" onKeyUp={(e) => setRefDesign(e.currentTarget.value)} placeholder="url reference" class={tw`mb-2 w-full`} />}
 
                                 <p>Number of Page</p>
                                 <menu class={tw`my-2 w-full`}>
                                     <button onClick={() => setNumPage(1)} class={tw`${numPage == 1 ? 'btnFilled' : 'btnBorder'}`}><li>3-5</li></button>
                                     <button onClick={() => setNumPage(2)} class={tw`${numPage == 2 ? 'btnFilled' : 'btnBorder'}`}><li>6-10</li></button>
-                                    <button onClick={() => setNumPage(3)} class={tw`${numPage == 3 ? 'btnFilled' : 'btnBorder'}`}><li>10-20</li></button>
+                                    <button onClick={() => setNumPage(3)} class={tw`${numPage == 3 ? 'btnFilled' : 'btnBorder'}`}><li>11-20</li></button>
                                 </menu>
                                 <p>Database Collection</p>
                                 <menu class={tw`my-2 w-full`}>
@@ -158,6 +202,11 @@ export default function Pricing(props: { onBack?(): void }) {
                             </menuitem>
 
                         </div>}
+
+                    {cusDesign > 0 && numPage > 0 && dbCollection > 0 && apis > 0 &&
+                        <menu class={tw`justify-end w-full mb-8`}>
+                            <button onClick={email} class={tw`btnFilled`}><p>Submit</p></button>
+                        </menu>}
 
                 </div>
             </main>

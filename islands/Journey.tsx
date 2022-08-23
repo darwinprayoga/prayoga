@@ -61,7 +61,7 @@ export default function Journey(props: { onNext(): void, onBack(): void }) {
                         <button class={tw`focus:outline-none flex items-center bg-darkTrans rounded-xl py-1 px-2`}><b class={tw`tracking-wider text-white`}>🧩 UI/UX Designer</b></button>
                         <button class={tw`focus:outline-none flex items-center bg-darkTrans rounded-xl py-1 px-2`}><b class={tw`tracking-wider text-white`}>🪄 Full Stack Developer</b></button>
                     </menu>
-                    <p class={tw`text-sub`}>📌 <a href="https://goo.gl/maps/dnUuSAauKD3g7PFT9">Jakarta, Indonesia</a> • I`m specializing execute web design & code for any demand to create growth-thinking of digitize experiences.</p>
+                    <p class={tw`text-sub`}>📌 <a class={tw`pointer`} onClick={() => location.href = "https://goo.gl/maps/dnUuSAauKD3g7PFT9"}>Jakarta, Indonesia</a> • I`m specializing execute web design & code for any demand to create growth-thinking of digitize experiences.</p>
                 </menuitem>
 
 
