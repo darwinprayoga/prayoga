@@ -212,7 +212,7 @@ Google Console: {
             </main>
 
             {props.onBack &&
-                <section class={tw`fixed flex justify-between w-full p-4 bottom-0`}>
+                <section class={tw`bg-gradient-to-t from-black to-transparent fixed flex justify-between p-4 w-full bottom-0`}>
                     <Nav onBack={props.onBack} />
                 </section>}
 
