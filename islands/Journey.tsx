@@ -25,7 +25,7 @@ export default function Journey(props: { onNext(): void, onBack(): void }) {
     }, [setContact])
 
     return (
-        <div class={tw`bg-default text-black`}>
+        <div class={tw`fixed inset-0 overflow-y-auto bg-default text-black`}>
 
             <section class={tw`fixed bottom-0 left-0 m-4 flex gap-5 flex-col items-center`}>
                 <button onClick={() => open('https://github.com/darwinprayoga')} class={tw`${hide} hover:scale-110 focus:outline-none text-${_color}-600`}><Github class={tw`fill-current w-7`} /></button>

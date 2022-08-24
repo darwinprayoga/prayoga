@@ -103,11 +103,11 @@ export default function FoodMenu(props: { onBack?(): void }) {
 
                         <menuitem class={tw`pb-20 gap-0 divide-y`}>
 
-                            <Item name='Burger' price={99} order={burger} option={burgero} setOption={setBurgero} setOrder={setBurger} src='/fastmeal/burger.avif' />
+                            <Item name='Burger' price={99} order={burger} option={burgero} setOption={setBurgero} setOrder={setBurger} src='/fastmeal/burger.png' />
 
-                            <Item name='Pizza' price={135} order={pizza} option={pizzao} setOption={setPizzao} setOrder={setPizza} src='/fastmeal/pizza.avif' />
+                            <Item name='Pizza' price={135} order={pizza} option={pizzao} setOption={setPizzao} setOrder={setPizza} src='/fastmeal/pizza.png' />
 
-                            <Item name='Sushi' price={169} order={sushi} option={sushio} setOption={setSuhsio} setOrder={setSuhsi} src='/fastmeal/sushi.avif' />
+                            <Item name='Sushi' price={169} order={sushi} option={sushio} setOption={setSuhsio} setOrder={setSuhsi} src='/fastmeal/sushi.png' />
 
                         </menuitem>
 
@@ -124,19 +124,19 @@ export default function FoodMenu(props: { onBack?(): void }) {
 
                             <h2 class={tw`text-default`}>Food</h2>
 
-                            {burger > 0 && <Checkout setTotal={setBurgerx} name='Burger' price={99} option={burgero} order={burger} src='/fastmeal/burger.avif' />}
+                            {burger > 0 && <Checkout setTotal={setBurgerx} name='Burger' price={99} option={burgero} order={burger} src='/fastmeal/burger.png' />}
 
-                            {pizza > 0 && <Checkout setTotal={setPizzax} name='Pizza' price={135} option={pizzao} order={pizza} src='/fastmeal/pizza.avif' />}
+                            {pizza > 0 && <Checkout setTotal={setPizzax} name='Pizza' price={135} option={pizzao} order={pizza} src='/fastmeal/pizza.png' />}
 
-                            {sushi > 0 && <Checkout setTotal={setSuhsix} name='Sushi' price={169} option={sushio} order={sushi} src='/fastmeal/sushi.avif' />}
+                            {sushi > 0 && <Checkout setTotal={setSuhsix} name='Sushi' price={169} option={sushio} order={sushi} src='/fastmeal/sushi.png' />}
 
                             <h2 class={tw`text-default`}>Drink</h2>
 
-                            {honey > 0 && <Checkout setTotal={setHoneyx} name='Old Honey Barn' price={34} option={honeyo} order={honey} src='/fastmeal/honey.avif' />}
+                            {honey > 0 && <Checkout setTotal={setHoneyx} name='Old Honey Barn' price={34} option={honeyo} order={honey} src='/fastmeal/honey.png' />}
 
-                            {wood > 0 && <Checkout setTotal={setWoodx} name='Woodford Reserve' price={39} option={woodo} order={wood} src='/fastmeal/wood.avif' />}
+                            {wood > 0 && <Checkout setTotal={setWoodx} name='Woodford Reserve' price={39} option={woodo} order={wood} src='/fastmeal/wood.png' />}
 
-                            {boba > 0 && <Checkout setTotal={setBobax} name='Hong Kong Boba' price={59} option={bobao} order={boba} src='/fastmeal/boba.avif' />}
+                            {boba > 0 && <Checkout setTotal={setBobax} name='Hong Kong Boba' price={59} option={bobao} order={boba} src='/fastmeal/boba.png' />}
 
                         </menuitem>
 
@@ -158,11 +158,11 @@ export default function FoodMenu(props: { onBack?(): void }) {
 
                         <menuitem class={tw`pb-20 gap-0 divide-y`}>
 
-                            <Item name='Old Honey Barn' price={34} order={honey} option={honeyo} setOption={setHoneyo} setOrder={setHoney} src='/fastmeal/honey.avif' />
+                            <Item name='Old Honey Barn' price={34} order={honey} option={honeyo} setOption={setHoneyo} setOrder={setHoney} src='/fastmeal/honey.png' />
 
-                            <Item name='Woodford Reserve' price={39} order={wood} option={woodo} setOption={setWoodo} setOrder={setWood} src='/fastmeal/wood.avif' />
+                            <Item name='Woodford Reserve' price={39} order={wood} option={woodo} setOption={setWoodo} setOrder={setWood} src='/fastmeal/wood.png' />
 
-                            <Item name='Hong Kong Boba' price={59} order={boba} option={bobao} setOption={setBobao} setOrder={setBoba} src='/fastmeal/boba.avif' />
+                            <Item name='Hong Kong Boba' price={59} order={boba} option={bobao} setOption={setBobao} setOrder={setBoba} src='/fastmeal/boba.png' />
 
                         </menuitem>
                     </main>}
