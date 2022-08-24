@@ -30,9 +30,11 @@ export default function Server(props: { onBack(): void }) {
             </div>
 
             <div class={tw`flex w-full mb-6 mt-32 max-w-screen-md`}>
-                <div class={tw`bg-darkTrans text-white pl-3 py-1 rounded-l-lg`}><h3>@</h3></div>
-                <input type="search" name="search" onKeyUp={(e) => setType(e.currentTarget.value)} onKeyDown={handle} class={tw`lowercase rounded-[0px] pl-1`} placeholder='Username' />
-                <button onClick={() => location.href = `/${type.toLowerCase()}`} class={tw`bg-darkTrans font-bold text-${_color}-600 tracking-wider pr-2 rounded-r-lg focus:outline-none`}>try</button>
+                <div class={tw`flex w-full bg-dark rounded-lg`}>
+                    <div class={tw`bg-dark text-white pl-3 py-1 rounded-l-lg`}><h3>@</h3></div>
+                    <input type="search" name="search" onKeyUp={(e) => setType(e.currentTarget.value)} onKeyDown={handle} class={tw`bg-dark lowercase rounded-none pl-1`} placeholder='Username' />
+                    <button onClick={() => location.href = `/${type.toLowerCase()}`} class={tw`bg-dark font-bold text-${_color}-600 tracking-wider pr-2 rounded-r-lg focus:outline-none`}>try</button>
+                </div>
                 <button onClick={() => location.href = `/history`} class={tw`font-bold mr-2 ml-4 text-white tracking-wider focus:outline-none`}>🍃</button>
             </div>
 
