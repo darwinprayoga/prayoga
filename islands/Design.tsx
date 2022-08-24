@@ -38,12 +38,12 @@ export default function Design(props: { onNext(): void, onBack(): void }) {
 
 
                             <div onClick={() => setIndex(1)} class={tw`flex pointer mb-10`}>
-                                <img draggable={false} class={tw`rounded-2xl`} src='/fastmeal/thumb.png' />
+                                <img draggable={false} class={tw`w-full rounded-2xl`} src='/fastmeal/thumb.png' />
                                 <button class={tw`btnFilled absolute m-2 shadow-xl`}>Food Menu</button>
                             </div>
 
                             <div onClick={() => setIndex(2)} class={tw`flex pointer mb-10`}>
-                                <img draggable={false} class={tw`rounded-2xl`} src='/sickkfashion/thumb.png' />
+                                <img draggable={false} class={tw`w-full rounded-2xl`} src='/sickkfashion/thumb.png' />
                                 <button class={tw`btnFilled absolute m-2 shadow-xl`}>Fashion Catalogue</button>
                             </div>
 
