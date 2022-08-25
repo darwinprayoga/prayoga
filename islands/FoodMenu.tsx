@@ -87,7 +87,7 @@ export default function FoodMenu(props: { onBack?(): void }) {
 
     return (
         <div>
-            {props.onBack && <button onClick={props.onBack} class={tw`fixed z-10 top-0 right-0 flex p-4 focus:outline-none text-yellow-500 gap-2 items-center`}><Close class={tw`fill-current w-[30px]`} /></button>}
+            {props.onBack && <button onClick={props.onBack} class={tw`fixed z-10 top-0 right-0 flex p-4 focus:outline-none text-yellow-500 mr-2 items-center`}><Close class={tw`fill-current w-[30px]`} /></button>}
 
 
             <div class={tw`fixed inset-0 flex flex-col items-center bg-red-500`}>
@@ -101,7 +101,7 @@ export default function FoodMenu(props: { onBack?(): void }) {
                             <div class={tw`w-14 h-1 rounded-xl bg-default my-2 animate-pulse`} />
                         </menu>
 
-                        <menuitem class={tw`pb-20 gap-0 divide-y`}>
+                        <menuitem class={tw`pb-20 divide-y`}>
 
                             <Item name='Burger' price={99} order={burger} option={burgero} setOption={setBurgero} setOrder={setBurger} src='/fastmeal/burger.png' />
 
@@ -156,7 +156,7 @@ export default function FoodMenu(props: { onBack?(): void }) {
                             <div class={tw`w-14 h-1 rounded-xl bg-default my-2 animate-pulse`} />
                         </menu>
 
-                        <menuitem class={tw`pb-20 gap-0 divide-y`}>
+                        <menuitem class={tw`pb-20 divide-y`}>
 
                             <Item name='Old Honey Barn' price={34} order={honey} option={honeyo} setOption={setHoneyo} setOrder={setHoney} src='/fastmeal/honey.png' />
 
@@ -171,15 +171,15 @@ export default function FoodMenu(props: { onBack?(): void }) {
 
             <div class={tw`fixed flex justify-center bottom-0 left-0 right-0`}>
                 <div class={tw`flex shadow-inner rounded-full mb-4 bg-red-500`}>
-                    <button onClick={() => setIndex(0)} class={tw`focus:outline-none px-10 text-white flex gap-1 flex-col justify-center items-center`}>
-                        <h1>🍔</h1>
+                    <button onClick={() => setIndex(0)} class={tw`focus:outline-none px-10 text-white flex flex-col justify-center items-center`}>
+                        <h1 class={tw`mb-1`}>🍔</h1>
                         <p>Food</p>
                     </button>
-                    <button onClick={() => setIndex(1)} class={tw`focus:outline-none border(yellow-500 4) p-4 shadow-md bg-white text-yellow-500 rounded-full text-white flex gap-1 flex-col justify-center items-center`}>
+                    <button onClick={() => setIndex(1)} class={tw`focus:outline-none border(yellow-500 4) p-4 shadow-md bg-white text-yellow-500 rounded-full text-white flex flex-col justify-center items-center`}>
                         <h1>🛒</h1>
                     </button>
-                    <button onClick={() => setIndex(2)} class={tw`focus:outline-none px-10 text-white flex gap-1 flex-col justify-center items-center`}>
-                        <h1>🍺</h1>
+                    <button onClick={() => setIndex(2)} class={tw`focus:outline-none px-10 text-white flex flex-col justify-center items-center`}>
+                        <h1 class={tw`mb-1`}>🍺</h1>
                         <p>Drink</p>
                     </button>
                 </div>

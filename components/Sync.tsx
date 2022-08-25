@@ -6,7 +6,7 @@ export const theDomain = 'https://prayoga.deno.dev/'
 
 
 
-export default function Head(props: { title?: string }) {
+export default function Head(props: { title?: string, image?: string }) {
 
     useEffect(() => {
 
@@ -22,6 +22,10 @@ export default function Head(props: { title?: string }) {
 
     }, [])
 
+
+
+    const desc = "Darwin Prayoga: Get your own Pokemon now! & i bet u 🫵, to try this Site performance."
+
     return (
         <head>
 
@@ -32,6 +36,26 @@ export default function Head(props: { title?: string }) {
             <link rel="shortcut icon" href="/favicon.ico" />
 
             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+
+
+            <meta name="description" content="Darwin Prayoga`s Portfolio and Open Source. Contribute to darwinprayoga/prayoga development by creating an account on GitHub." />
+
+            <meta property="og:url" content={theDomain} />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content={props.title || 'Darwin Prayoga'} />
+            <meta property="og:description" content={desc} />
+            <meta property="og:image" content={props.image || '/thumb.png'} />
+
+
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta property="twitter:domain" content={theDomain} />
+            <meta property="twitter:url" content={theDomain} />
+            <meta name="twitter:title" content={props.title || 'Darwin Prayoga'} />
+            <meta name="twitter:description" content={desc} />
+            <meta name="twitter:image" content={props.image || '/thumb.png'} />
+
+
 
         </head>
     )

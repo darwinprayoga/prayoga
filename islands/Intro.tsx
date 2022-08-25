@@ -21,9 +21,9 @@ export default function Intro(props: { onNext(): void, onBottom(): void }) {
 
             <img draggable={false} class={tw`fixed bottom-0 right-0 w-80`} src="/avatar.png" />
 
-            <button onClick={props.onNext} class={tw`focus:outline-none fixed text-blue-600 ${hide} gap-2 m-4 items-center top-0 right-0`}>
+            <button onClick={props.onNext} class={tw`focus:outline-none fixed text-blue-600 ${hide} m-4 items-center top-0 right-0`}>
                 <h3>Next</h3>
-                <Next class={tw`fill-current w-[30px] h-[30px]`} />
+                <Next class={tw`fill-current ml-2 w-[30px] h-[30px]`} />
             </button>
 
             <menuitem>
@@ -34,7 +34,7 @@ export default function Intro(props: { onNext(): void, onBottom(): void }) {
                 </button>
             </menuitem>
 
-            <button onClick={props.onBottom} class={tw`focus:outline-none fixed text-[#ADADAD] ${toggle ? 'hidden' : 'flex'} gap-2 m-4 items-center bottom-0 left-0`}>
+            <button onClick={props.onBottom} class={tw`focus:outline-none fixed text-[#ADADAD] ${toggle ? 'hidden' : 'flex'} m-4 items-center bottom-0 left-0`}>
                 <Bottom class={tw`fill-current w-[30px] h-[30px]`} />
             </button>
         </div>

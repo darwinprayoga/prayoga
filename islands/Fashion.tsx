@@ -6,7 +6,7 @@ import { Close } from "../components/Icons.tsx";
 export default function Fashion(props: { onBack?(): void }) {
     return (
         <div class={tw`fixed inset-0 bg-[#0C0C0C] overflow-auto`}>
-            {props.onBack && <button onClick={props.onBack} class={tw`fixed z-10 top-0 right-0 flex p-4 focus:outline-none text-[#FF4F2A] gap-2 items-center`}><Close class={tw`fill-current w-[30px]`} /></button>}
+            {props.onBack && <button onClick={props.onBack} class={tw`fixed z-10 top-0 right-0 flex p-4 focus:outline-none text-[#FF4F2A] mr-2 items-center`}><Close class={tw`fill-current w-[30px]`} /></button>}
 
             <img draggable={false} class={tw`fixed left-0 h-full`} src="/sickkfashion/frame1.svg" />
 

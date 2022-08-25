@@ -108,7 +108,7 @@ export const config: Configuration = {
     b: apply(`text(default xs md:sm) font-bold`),
     span: apply(`flex w-min bg-${_color}-600 rounded-full px-4 py-1`),
     menu: apply(`flex m-0 p-0 justify-evenly items-center`),
-    menuitem: apply(`flex flex-col m-0 p-0 justify-start items-start gap-2`),
+    menuitem: apply(`flex flex-col m-0 p-0 justify-start items-start`),
     input: apply(
       `focus:outline-none tracking-wider bg-darkTrans p-2 rounded-lg w-full placeholder-hint`,
     ),

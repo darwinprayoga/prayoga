@@ -20,8 +20,8 @@ export default function Meter() {
                 <h3>Performance</h3>
             </section>
 
-            <section class={tw`grid grid-cols-2 gap-8 my-8`}>
-                <menuitem>
+            <section class={tw`grid grid-cols-2 my-8`}>
+                <menuitem class={tw`mr-8`}>
                     <p>Speed Index</p>
                     <p class={tw`text-stabilo`}>0.7s</p>
                     <p>Largest Contentful Paint</p>

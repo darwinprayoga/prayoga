@@ -38,12 +38,12 @@ export default function Design(props: { onNext(): void, onBack(): void }) {
 
 
                             <div onClick={() => setIndex(1)} class={tw`flex pointer mb-10`}>
-                                <img draggable={false} class={tw`w-full rounded-2xl`} src='/fastmeal/thumb.png' />
+                                <img draggable={false} class={tw`w-auto h-auto rounded-2xl`} src='/fastmeal/thumb.png' />
                                 <button class={tw`btnFilled absolute m-2 shadow-xl`}>Food Menu</button>
                             </div>
 
                             <div onClick={() => setIndex(2)} class={tw`flex pointer mb-10`}>
-                                <img draggable={false} class={tw`w-full rounded-2xl`} src='/sickkfashion/thumb.png' />
+                                <img draggable={false} class={tw`w-auto h-auto rounded-2xl`} src='/sickkfashion/thumb.png' />
                                 <button class={tw`btnFilled absolute m-2 shadow-xl`}>Fashion Catalogue</button>
                             </div>
 
@@ -57,9 +57,9 @@ export default function Design(props: { onNext(): void, onBack(): void }) {
 
                     <section class={tw`bg-gradient-to-t from-black to-transparent fixed flex justify-between p-4 w-full bottom-0`}>
                         <Nav onBack={props.onBack} />
-                        <button onClick={props.onNext} class={tw`flex focus:outline-none text-${_color}-600 gap-2 items-center`}>
+                        <button onClick={props.onNext} class={tw`flex focus:outline-none text-${_color}-600 items-center`}>
                             <h3>Next</h3>
-                            <Next class={tw`fill-current w-[30px]`} />
+                            <Next class={tw`fill-current ml-2 w-[30px]`} />
                         </button>
                     </section>
 

@@ -20,12 +20,12 @@ export default function Option(props: { onBack(): void }) {
 
                     <div class={tw`modal px-4`}>
                         <menu class={tw`w-full`}>
-                            <button onClick={() => setIndex(1)} class={tw`focus:outline-none hover:scale-105 flex gap-1 flex-col justify-center items-center`}>
-                                <h1>🔮</h1>
+                            <button onClick={() => setIndex(1)} class={tw`focus:outline-none hover:scale-105 flex flex-col justify-center items-center`}>
+                                <h1 class={tw`mb-1`}>🔮</h1>
                                 <p>Poke`ground</p>
                             </button>
-                            <button onClick={() => setIndex(2)} class={tw`focus:outline-none hover:scale-105 flex gap-1 flex-col justify-center items-center`}>
-                                <h1>💸</h1>
+                            <button onClick={() => setIndex(2)} class={tw`focus:outline-none hover:scale-105 flex flex-col justify-center items-center`}>
+                                <h1 class={tw`mb-1`}>💸</h1>
                                 <p>Go Pricing</p>
                             </button>
                         </menu>

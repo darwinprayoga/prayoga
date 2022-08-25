@@ -13,8 +13,8 @@ export default function Pokedata({ data }: { data: any }) {
 
             <Head title="Poke`data ☄️" />
 
-            <nav onClick={() => location.href = '/'} class={tw`pointer flex gap-2 p-4 justify-start items-center`}>
-                <img draggable={false} class={tw`w-10 h-10`} src="/logo.png" />
+            <nav onClick={() => location.href = '/'} class={tw`pointer flex p-4 justify-start items-center`}>
+                <img draggable={false} class={tw`w-10 h-10 mr-2`} src="/logo.png" />
                 <h3>Prayoga</h3>
             </nav>
 

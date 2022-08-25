@@ -40,13 +40,13 @@ export default function Card() {
                 <p>Build up growing businesses, agencies, and studios by executing web design & code for any demand to create growth-thinking of digitize experiences.</p>
             </section>
 
-            <div class={tw`grid grid-cols-2 gap-4 pt-6`}>
+            <div class={tw`grid grid-cols-2 pt-6`}>
                 {toggle ?
-                    <menuitem onClick={() => setToggle(!toggle)} class={tw`items-end pointer`}>
+                    <menuitem onClick={() => setToggle(!toggle)} class={tw`items-end mb-4 pointer`}>
                         <p>Portfolio</p>
                         <sub>Contact</sub>
                     </menuitem> :
-                    <menuitem onClick={() => setToggle(!toggle)} class={tw`items-end pointer`}>
+                    <menuitem onClick={() => setToggle(!toggle)} class={tw`items-end mb-4 pointer`}>
                         <p>Contact</p>
                         <sub>Portfolio</sub>
                     </menuitem>}

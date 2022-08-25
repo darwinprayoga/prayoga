@@ -69,10 +69,10 @@ export default function Integrity(props: { onNext(): void, onBack(): void }) {
                             </menu>
                             <div class={tw`flex justify-between items-center py-2`}>
                                 <sub>: Client App / User Access Usage</sub>
-                                <menu class={tw`justify-end gap-3`}>
-                                    <img draggable={false} src="/p1.svg" class={tw`w-5`} />
-                                    <img draggable={false} src="/p2.png" class={tw`w-5`} />
-                                    <img draggable={false} src="/p3.png" class={tw`w-5`} />
+                                <menu class={tw`justify-end`}>
+                                    <img draggable={false} src="/p1.svg" class={tw`mr-3 w-5`} />
+                                    <img draggable={false} src="/p2.png" class={tw`mr-3 w-5`} />
+                                    <img draggable={false} src="/p3.png" class={tw`mr-3 w-5`} />
                                     <img draggable={false} src="/p4.svg" class={tw`w-5`} />
                                 </menu>
                             </div>
@@ -105,10 +105,10 @@ export default function Integrity(props: { onNext(): void, onBack(): void }) {
                             </menu>
                             <div class={tw`flex justify-between items-center py-2`}>
                                 <sub>: For Consumer & Branding Platform</sub>
-                                <menu class={tw`justify-end gap-3`}>
-                                    <img draggable={false} src="/e1.png" class={tw`w-5`} />
-                                    <img draggable={false} src="/e2.svg" class={tw`w-5`} />
-                                    <img draggable={false} src="/e3.png" class={tw`w-5`} />
+                                <menu class={tw`justify-end`}>
+                                    <img draggable={false} src="/e1.png" class={tw`mr-3 w-5`} />
+                                    <img draggable={false} src="/e2.svg" class={tw`mr-3 w-5`} />
+                                    <img draggable={false} src="/e3.png" class={tw`mr-3 w-5`} />
                                     <img draggable={false} src="/e4.png" class={tw`w-5`} />
                                 </menu>
                             </div>
@@ -117,8 +117,8 @@ export default function Integrity(props: { onNext(): void, onBack(): void }) {
 
 
 
-                    <menu class={tw`gap-3`}>
-                        <button onClick={performance} class={tw`${perOn}`}>⚡</button>
+                    <menu>
+                        <button onClick={performance} class={tw`${perOn} mr-3`}>⚡</button>
                         <button onClick={experience} class={tw`${expOn}`}>✨</button>
                     </menu>
 
@@ -136,9 +136,9 @@ export default function Integrity(props: { onNext(): void, onBack(): void }) {
 
             <section class={tw`fixed flex justify-between w-full p-4 bottom-0`}>
                 <Nav onBack={props.onBack} />
-                <button onClick={props.onNext} class={tw`flex focus:outline-none text-${_color}-600 gap-2 items-center`}>
+                <button onClick={props.onNext} class={tw`flex focus:outline-none text-${_color}-600 items-center`}>
                     <h3>Next</h3>
-                    <Next class={tw`fill-current w-[30px]`} />
+                    <Next class={tw`fill-current ml-2 w-[30px]`} />
                 </button>
             </section>
 
