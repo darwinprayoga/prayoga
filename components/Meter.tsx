@@ -20,7 +20,7 @@ export default function Meter() {
                 <h3>Performance</h3>
             </section>
 
-            <section class={tw`grid grid-cols-2 my-8`}>
+            <menu class={tw`my-8`}>
                 <menuitem class={tw`mr-8`}>
                     <p>Speed Index</p>
                     <p class={tw`text-stabilo`}>0.7s</p>
@@ -33,7 +33,7 @@ export default function Meter() {
                     <p>Total Blocking Time</p>
                     <p class={tw`text-stabilo`}>0ms</p>
                 </menuitem>
-            </section>
+            </menu>
         </div>
     )
 }

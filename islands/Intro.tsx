@@ -27,7 +27,7 @@ export default function Intro(props: { onNext(): void, onBottom(): void }) {
             </button>
 
             <menuitem>
-                <h1 class={tw`text-${text} animate-bounce`}>Prayoga's here!</h1>
+                <h1 class={tw`text-${text} animate-bounce mb-2`}>Prayoga's here!</h1>
 
                 <button onClick={() => setToggle(!toggle)} class={tw`focus:outline-none flex z-10 shadow-inner shadow-sm justify-${x} items-center w-[51px] h-[31px] rounded-full bg-${col}`}>
                     <div class={tw`w-[27px] h-[27px] mx-[2px] bg-white rounded-full shadow-lg`} />

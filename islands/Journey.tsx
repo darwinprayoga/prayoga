@@ -2,12 +2,12 @@
 import { h } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { tw, _color } from '@twind';
-import { Branch, Download, Github, Instagram, Linkedin, Right, Star, Twitter } from "../components/Icons.tsx";
+import { Branch, Download, Github, Linkedin, Right, Star, Twitter } from "../components/Icons.tsx";
 import { useOs } from "../components/Sync.tsx";
 
 
 
-export default function Journey(props: { onNext(): void, onBack(): void }) {
+export default function Journey(props: { onNext?(): void, onBack?(): void }) {
 
     const [contact, setContact] = useState(false)
     const hide = contact ? 'flex' : 'hidden'
@@ -28,10 +28,11 @@ export default function Journey(props: { onNext(): void, onBack(): void }) {
         <div class={tw`fixed inset-0 overflow-y-auto bg-default text-black`}>
 
             <section class={tw`fixed bottom-0 left-0 m-4 flex flex-col items-center`}>
-                <button onClick={() => open('https://github.com/darwinprayoga')} class={tw`${hide} hover:scale-110 focus:outline-none text-${_color}-600 mb-5`}><Github class={tw`fill-current w-7`} /></button>
-                <button onClick={() => open('https://instagram.com/darwinprayoga')} class={tw`${hide} hover:scale-110 focus:outline-none text-${_color}-600 mb-5`}><Instagram class={tw`fill-current w-7`} /></button>
-                <button onClick={() => open('https://twitter.com/mdarwinp')} class={tw`${hide} hover:scale-110 focus:outline-none text-${_color}-600 mb-5`}><Twitter class={tw`fill-current w-7`} /></button>
+                <button onClick={() => open('https://www.figma.com/@darwinprayoga')} class={tw`${hide} hover:scale-110 focus:outline-none mb-5`}><img draggable={false} src="/figma.png" class={tw`w-7`} /></button>
+                <button onClick={() => open('https://github.com/darwinprayoga')} class={tw`${hide} hover:scale-110 focus:outline-none text-black mb-5`}><Github class={tw`fill-current w-7`} /></button>
                 <button onClick={() => open('https://linkedin.com/in/darwin-prayoga-61a6731b2')} class={tw`${hide} hover:scale-110 focus:outline-none text-${_color}-600 mb-5`}><Linkedin class={tw`fill-current w-7`} /></button>
+                <button onClick={() => open('https://twitter.com/mdarwinp')} class={tw`${hide} hover:scale-110 focus:outline-none text-[#1D9BF0] mb-5`}><Twitter class={tw`fill-current w-7`} /></button>
+                <button onClick={() => open('https://instagram.com/darwinprayoga')} class={tw`${hide} hover:scale-110 focus:outline-none text-white mb-5`}><img draggable={false} src="/instagram.png" class={tw`w-7`} /></button>
                 {contact && <div class={tw`h-32 w-[1px] bg-sub mb-5`} />}
                 <div onClick={() => setContact(!contact)} class={tw`flex pointer h-3 w-3 ${!contact && 'ml-2'}`}>
                     <div class={tw`animate-ping absolute inline-flex h-3 w-3 rounded-full bg-${_color}-400 opacity-75`} />
@@ -47,7 +48,7 @@ export default function Journey(props: { onNext(): void, onBack(): void }) {
 
             <main>
                 <nav class={tw`flex justify-between items-center`}>
-                    <img draggable={false} onClick={props.onBack} class={tw`w-10 h-10 pointer`} src="/logo.png" />
+                    <img draggable={false} onClick={props.onBack ? props.onBack : () => location.href = '/'} class={tw`w-10 h-10 pointer`} src="/logo.png" />
                     <button onClick={() => location.href = '/resume.pdf'} class={tw`focus:outline-none tracking-wider bg-default flex text-darkTrans py-2 px-4 shadow-inner rounded-xl`}><Download class={tw`fill-current mr-2 w-5`} />Resume</button>
                 </nav>
 
@@ -71,13 +72,13 @@ export default function Journey(props: { onNext(): void, onBack(): void }) {
                         <p class={tw`text-sub`}>Capabilities:</p>
                         <section class={tw`flex w-full justify-center mt-6`}>
                             <menuitem class={tw`mr-6`}>
-                                <li><sub>Typescript & JS</sub></li>
-                                <li><sub>Node Js</sub></li>
+                                <li class={tw`mb-2`}><sub>Typescript & JS</sub></li>
+                                <li class={tw`mb-2`}><sub>Node Js</sub></li>
                                 <li><sub>HTML / CSS</sub></li>
                             </menuitem>
                             <menuitem>
-                                <li><sub>Google Console</sub></li>
-                                <li><sub>Figma</sub></li>
+                                <li class={tw`mb-2`}><sub>Google Console</sub></li>
+                                <li class={tw`mb-2`}><sub>Figma</sub></li>
                                 <li><sub>Adobe PS, AI</sub></li>
                             </menuitem>
                         </section>
@@ -116,7 +117,7 @@ export default function Journey(props: { onNext(): void, onBack(): void }) {
                             <p>Specializing execute web design & code for any demand</p>
                         </menuitem>
                     </menu>
-                    <button onClick={props.onNext} class={tw`focus:outline-none flex items-center bg-${_color}-600 rounded-xl py-1 px-2 text-white`}>OPEN<Right class={tw`fill-current w-5 ml-2`} /></button>
+                    <button onClick={props.onNext ? props.onNext : () => location.href = '/'} class={tw`focus:outline-none flex items-center bg-${_color}-600 rounded-xl py-1 px-2 text-white`}>OPEN<Right class={tw`fill-current w-5 ml-2`} /></button>
                 </div>
 
                 <div class={tw`flex justify-end`}>
@@ -154,6 +155,7 @@ export default function Journey(props: { onNext(): void, onBack(): void }) {
                             <Branch class={tw`fill-current mr-2 w-3`} />
                             <sub>50.3k</sub>
                         </menu>
+                        <button onClick={() => open('https://www.figma.com/community/file/1144173789761736149')} class={tw`flex hover:scale-110 focus:outline-none mt-4`}><img draggable={false} src="/figma.png" class={tw`w-4`} /></button>
                     </menuitem>
                 </footer>
 

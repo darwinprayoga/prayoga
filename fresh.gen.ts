@@ -5,12 +5,13 @@
 import * as $0 from "./routes/[username].tsx";
 import * as $1 from "./routes/_404.tsx";
 import * as $2 from "./routes/_500.tsx";
-import * as $3 from "./routes/api/soon.ts";
+import * as $3 from "./routes/api/pokedata.ts";
 import * as $4 from "./routes/fastmeal.tsx";
 import * as $5 from "./routes/history.tsx";
 import * as $6 from "./routes/index.tsx";
 import * as $7 from "./routes/plan.tsx";
-import * as $8 from "./routes/sickkfashion.tsx";
+import * as $8 from "./routes/portfolio.tsx";
+import * as $9 from "./routes/sickkfashion.tsx";
 import * as $$0 from "./islands/Design.tsx";
 import * as $$1 from "./islands/Fashion.tsx";
 import * as $$2 from "./islands/FoodMenu.tsx";
@@ -29,12 +30,13 @@ const manifest = {
     "./routes/[username].tsx": $0,
     "./routes/_404.tsx": $1,
     "./routes/_500.tsx": $2,
-    "./routes/api/soon.ts": $3,
+    "./routes/api/pokedata.ts": $3,
     "./routes/fastmeal.tsx": $4,
     "./routes/history.tsx": $5,
     "./routes/index.tsx": $6,
     "./routes/plan.tsx": $7,
-    "./routes/sickkfashion.tsx": $8,
+    "./routes/portfolio.tsx": $8,
+    "./routes/sickkfashion.tsx": $9,
   },
   islands: {
     "./islands/Design.tsx": $$0,
