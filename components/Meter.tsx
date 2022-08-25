@@ -20,8 +20,8 @@ export default function Meter() {
                 <h3>Performance</h3>
             </section>
 
-            <menu class={tw`my-8`}>
-                <menuitem class={tw`mr-8`}>
+            <menu class={tw`w-full my-8`}>
+                <menuitem>
                     <p>Speed Index</p>
                     <p class={tw`text-stabilo`}>0.7s</p>
                     <p>Largest Contentful Paint</p>

@@ -43,11 +43,11 @@ export default function Card() {
             <div class={tw`grid grid-cols-2 pt-6`}>
                 {toggle ?
                     <menuitem onClick={() => setToggle(!toggle)} class={tw`items-end mr-4 pointer`}>
-                        <p class={tw`mb-2`}>Portfolio</p>
+                        <p class={tw`mb-1`}>Portfolio</p>
                         <sub>Contact</sub>
                     </menuitem> :
                     <menuitem onClick={() => setToggle(!toggle)} class={tw`items-end mr-4 pointer`}>
-                        <p class={tw`mb-2`}>Contact</p>
+                        <p class={tw`mb-1`}>Contact</p>
                         <sub>Portfolio</sub>
                     </menuitem>}
                 {toggle ?
