@@ -28,9 +28,9 @@ export default function Journey(props: { onNext?(): void, onBack?(): void }) {
         <div class={tw`fixed inset-0 overflow-y-auto bg-default text-black`}>
 
             <section class={tw`fixed bottom-0 left-0 m-4 flex flex-col items-center`}>
-                <button onClick={() => open('https://www.figma.com/@darwinprayoga')} class={tw`${hide} hover:scale-110 focus:outline-none mb-5`}><img draggable={false} src="/figma.png" class={tw`w-7`} /></button>
+                <button onClick={() => open('https://www.figma.com/@darwinprayoga')} class={tw`${hide} hover:scale-110 focus:outline-none mb-5`}><img src="/figma.svg" class={tw`w-5`} /></button>
                 <button onClick={() => open('https://github.com/darwinprayoga')} class={tw`${hide} hover:scale-110 focus:outline-none text-black mb-5`}><Github class={tw`fill-current w-7`} /></button>
-                <button onClick={() => open('https://linkedin.com/in/darwin-prayoga-61a6731b2')} class={tw`${hide} hover:scale-110 focus:outline-none text-${_color}-600 mb-5`}><Linkedin class={tw`fill-current w-7`} /></button>
+                <button onClick={() => open('https://linkedin.com/in/darwin-prayoga-61a6731b2')} class={tw`${hide} hover:scale-110 focus:outline-none text-[#0A66C2] mb-5`}><Linkedin class={tw`fill-current w-7`} /></button>
                 <button onClick={() => open('https://twitter.com/mdarwinp')} class={tw`${hide} hover:scale-110 focus:outline-none text-[#1D9BF0] mb-5`}><Twitter class={tw`fill-current w-7`} /></button>
                 <button onClick={() => open('https://instagram.com/darwinprayoga')} class={tw`${hide} hover:scale-110 focus:outline-none text-white mb-5`}><img draggable={false} src="/instagram.png" class={tw`w-7`} /></button>
                 {contact && <div class={tw`h-32 w-[1px] bg-sub mb-5`} />}
@@ -155,7 +155,7 @@ export default function Journey(props: { onNext?(): void, onBack?(): void }) {
                             <Branch class={tw`fill-current mr-2 w-3`} />
                             <sub>50.3k</sub>
                         </menu>
-                        <button onClick={() => open('https://www.figma.com/community/file/1144173789761736149')} class={tw`flex hover:scale-110 focus:outline-none mt-4`}><img draggable={false} src="/figma.png" class={tw`w-4`} /></button>
+                        <button onClick={() => open('https://www.figma.com/community/file/1144173789761736149')} class={tw`flex hover:scale-110 focus:outline-none mt-4`}><img src="/figma.svg" class={tw`w-3`} /></button>
                     </menuitem>
                 </footer>
 
