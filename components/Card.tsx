@@ -33,7 +33,7 @@ export default function Card() {
 
             <section class={tw`mb-10`}>
                 <h2>Darwin Prayoga</h2>
-                <p>UI/UX Designer & Full Stack Developer</p>
+                <p>UI/UX Designer & Frontend Developer</p>
             </section>
 
             <section class={tw`mx-6`}>

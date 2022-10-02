@@ -48,21 +48,21 @@ export default function Journey(props: { onNext?(): void, onBack?(): void }) {
 
             <main>
                 <nav class={tw`flex justify-between items-center`}>
-                    <img draggable={false} onClick={props.onBack ? props.onBack : () => location.href = '/'} class={tw`w-10 h-10 pointer`} src="/logo.png" />
+                    <img draggable={false} onClick={props.onBack ? props.onBack : () => location.href = '/'} class={tw`w-10 h-10 pointer hover:animate-spin`} src="/logo.png" />
                     <button onClick={() => location.href = '/resume.pdf'} class={tw`focus:outline-none tracking-wider bg-default flex text-darkTrans py-2 px-4 shadow-inner rounded-xl`}><Download class={tw`fill-current mr-2 w-5`} />Resume</button>
                 </nav>
 
 
 
                 <menuitem class={tw`my-12`}>
-                    <p class={tw`font-mono text-${_color}-600`}>Hi!👋, let ya'll kno me</p>
+                    <p class={tw`font-mono text-${_color}-600 animate-bounce`}>Hi!👋, let ya'll kno me</p>
                     <h1 class={tw`font-bold text-dark my-2`}>Darwin Prayoga</h1>
-                    <h2 class={tw`font-bold text-sub mb-2`}>Build up growth things</h2>
+                    <h2 class={tw`font-bold text-sub mb-2 animate-pulse`}>Build up growth things</h2>
                     <menu>
                         <button class={tw`focus:outline-none flex items-center bg-darkTrans rounded-xl py-1 px-2 mr-2`}><b class={tw`tracking-wider text-white`}>🧩 UI/UX Designer</b></button>
-                        <button class={tw`focus:outline-none flex items-center bg-darkTrans rounded-xl py-1 px-2`}><b class={tw`tracking-wider text-white`}>🪄 Full Stack Developer</b></button>
+                        <button class={tw`focus:outline-none flex items-center bg-darkTrans rounded-xl py-1 px-2`}><b class={tw`tracking-wider text-white`}>🪄 Frontend Developer</b></button>
                     </menu>
-                    <p class={tw`text-sub mt-2`}>📌 <a class={tw`pointer`} onClick={() => location.href = "https://goo.gl/maps/dnUuSAauKD3g7PFT9"}>Jakarta, Indonesia</a> • I`m specializing execute web design & code for any demand to create growth-thinking of digitize experiences.</p>
+                    <p class={tw`text-sub mt-2`}>📌 <a class={tw`pointer`} onClick={() => location.href = "https://goo.gl/maps/dnUuSAauKD3g7PFT9"}>Jakarta, Indonesia</a> • Specialize in executing web design & code for any demand to create growth-thinking of digitized experiences.</p>
                 </menuitem>
 
 
@@ -72,20 +72,25 @@ export default function Journey(props: { onNext?(): void, onBack?(): void }) {
                         <p class={tw`text-sub`}>Capabilities:</p>
                         <section class={tw`flex w-full justify-center mt-6`}>
                             <menuitem class={tw`mr-6`}>
-                                <li class={tw`mb-2`}><sub>Typescript & JS</sub></li>
-                                <li class={tw`mb-2`}><sub>Node Js</sub></li>
-                                <li><sub>HTML / CSS</sub></li>
+                                <li class={tw`mb-2`}><sub>Adobe PS</sub></li>
+                                <li class={tw`mb-2`}><sub>Adobe AI</sub></li>
+                                <li class={tw`mb-2`}><sub>Figma</sub></li>
+                                <li class={tw`mb-2`}><sub>Webflow</sub></li>
+                                <li class={tw`mb-2`}><sub>Corel Draw</sub></li>
                             </menuitem>
                             <menuitem>
-                                <li class={tw`mb-2`}><sub>Google Console</sub></li>
-                                <li class={tw`mb-2`}><sub>Figma</sub></li>
-                                <li><sub>Adobe PS, AI</sub></li>
+                                <li class={tw`mb-2`}><sub>JavaScript & TypeScript</sub></li>
+                                <li class={tw`mb-2`}><sub>NPM / Node JS</sub></li>
+                                <li class={tw`mb-2`}><sub>Git / Github</sub></li>
+                                <li class={tw`mb-2`}><sub>HTML & CSS</sub></li>
+                                <li class={tw`mb-2`}><sub>React JS & Next JS</sub></li>
+                                <li class={tw`mb-2`}><sub>Tailwind CSS</sub></li>
                             </menuitem>
                         </section>
                     </div>
 
                     <div class={tw`col-span-1 ml-2`}>
-                        <img draggable={false} onClick={() => setContact(!contact)} class={tw`pointer w-full h-full bg-${_color}-600 shadow-lg rounded-[32px]`} src='/profile.png' />
+                        <img draggable={false} onClick={() => setContact(!contact)} class={tw`pointer w-full bg-${_color}-600 shadow-lg rounded-[32px]`} src='/profile.png' />
                     </div>
                 </section>
             </main>
@@ -133,7 +138,7 @@ export default function Journey(props: { onNext?(): void, onBack?(): void }) {
                     </menu>
                     <button onClick={() => open('https://vifx.co.id')} class={tw`focus:outline-none flex items-center bg-${_color}-600 rounded-xl py-1 px-2 text-white`}>OPEN<Right class={tw`fill-current w-5 ml-2`} /></button>
                 </div>
-                <div class={tw`flex mb-16 justify-between items-center bg-white p-4 rounded-2xl w-full`}>
+                <div class={tw`flex mb-6 justify-between items-center bg-white p-4 rounded-2xl w-full`}>
                     <menu class={tw`justify-start items-center`}>
                         <img draggable={false} src='/ibf.png' class={tw`w-12 mr-4`} />
                         <menuitem>
@@ -142,6 +147,32 @@ export default function Journey(props: { onNext?(): void, onBack?(): void }) {
                         </menuitem>
                     </menu>
                     <button onClick={() => open('https://ibftrader.com')} class={tw`focus:outline-none flex items-center bg-${_color}-600 rounded-xl py-1 px-2 text-white`}>OPEN<Right class={tw`fill-current w-5 ml-2`} /></button>
+                </div>
+
+                <h2 class={tw`font-bold mb-6 tracking-wider text-default`}>Certificates</h2>
+                <div class={tw`flex mb-6 justify-between items-center bg-white p-4 rounded-2xl w-full`}>
+                    <menu class={tw`justify-start items-center`}>
+                        <img draggable={false} src='/ubsi.png' class={tw`w-12 mr-4`} />
+                        <menuitem>
+                            <h3 class={tw`text-dark`}>1st Place Winner</h3>
+                            <p>Digital campaign championship 34th-anniversary UBSI</p>
+                        </menuitem>
+                    </menu>
+                    <button onClick={() => location.href = '/campaign.pdf'} class={tw`focus:outline-none flex items-center bg-${_color}-600 rounded-xl py-1 px-2 text-white`}>OPEN<Right class={tw`fill-current w-5 ml-2`} /></button>
+                </div>
+
+                <div class={tw`flex justify-end`}>
+                    <h2 class={tw`font-bold mb-6 tracking-wider text-default`}>Educations</h2>
+                </div>
+                <div class={tw`flex mb-16 justify-between items-center bg-white p-4 rounded-2xl w-full`}>
+                    <menu class={tw`justify-start items-center`}>
+                        <img draggable={false} src='/ubsi.png' class={tw`w-12 mr-4`} />
+                        <menuitem>
+                            <h3 class={tw`text-dark`}>Bachelor of Engineering</h3>
+                            <p>Information Technology Department in Bina Sarana Informatika University of Slipi Jakarta</p>
+                        </menuitem>
+                    </menu>
+                    <button onClick={() => open('http://www.bsi.ac.id')} class={tw`focus:outline-none flex items-center bg-${_color}-600 rounded-xl py-1 px-2 text-white`}>OPEN<Right class={tw`fill-current w-5 ml-2`} /></button>
                 </div>
 
 
