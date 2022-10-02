@@ -27,7 +27,7 @@ export default function Journey(props: { onNext?(): void, onBack?(): void }) {
     return (
         <div class={tw`fixed inset-0 overflow-y-auto bg-default text-black`}>
 
-            <section class={tw`fixed bottom-0 left-0 m-4 flex flex-col items-center`}>
+            <section class={tw`fixed bottom-0 left-0 m-4 flex flex-col items-center z-20`}>
                 <button onClick={() => open('https://www.figma.com/@darwinprayoga')} class={tw`${hide} hover:scale-110 focus:outline-none mb-5`}><img src="/figma.svg" class={tw`w-5`} /></button>
                 <button onClick={() => open('https://github.com/darwinprayoga')} class={tw`${hide} hover:scale-110 focus:outline-none text-black mb-5`}><Github class={tw`fill-current w-7`} /></button>
                 <button onClick={() => open('https://linkedin.com/in/darwin-prayoga-61a6731b2')} class={tw`${hide} hover:scale-110 focus:outline-none text-[#0A66C2] mb-5`}><Linkedin class={tw`fill-current w-7`} /></button>
@@ -130,16 +130,6 @@ export default function Journey(props: { onNext?(): void, onBack?(): void }) {
                 </div>
                 <div class={tw`flex mb-6 justify-between items-center bg-white p-4 rounded-2xl w-full`}>
                     <menu class={tw`justify-start items-center`}>
-                        <img draggable={false} src='/victory.png' class={tw`w-12 mr-4`} />
-                        <menuitem>
-                            <h3 class={tw`text-dark`}>Victory International</h3>
-                            <p>Global financial investment and trading facilities, <sub>as Digital Marketing</sub></p>
-                        </menuitem>
-                    </menu>
-                    <button onClick={() => open('https://vifx.co.id')} class={tw`focus:outline-none flex items-center bg-${_color}-600 rounded-xl py-1 px-2 text-white`}>OPEN<Right class={tw`fill-current w-5 ml-2`} /></button>
-                </div>
-                <div class={tw`flex mb-6 justify-between items-center bg-white p-4 rounded-2xl w-full`}>
-                    <menu class={tw`justify-start items-center`}>
                         <img draggable={false} src='/ibf.png' class={tw`w-12 mr-4`} />
                         <menuitem>
                             <h3 class={tw`text-dark`}>International Business</h3>
@@ -147,6 +137,16 @@ export default function Journey(props: { onNext?(): void, onBack?(): void }) {
                         </menuitem>
                     </menu>
                     <button onClick={() => open('https://ibftrader.com')} class={tw`focus:outline-none flex items-center bg-${_color}-600 rounded-xl py-1 px-2 text-white`}>OPEN<Right class={tw`fill-current w-5 ml-2`} /></button>
+                </div>
+                <div class={tw`flex mb-6 justify-between items-center bg-white p-4 rounded-2xl w-full`}>
+                    <menu class={tw`justify-start items-center`}>
+                        <img draggable={false} src='/victory.png' class={tw`w-12 mr-4`} />
+                        <menuitem>
+                            <h3 class={tw`text-dark`}>Victory International</h3>
+                            <p>Global financial investment and trading facilities, <sub>as Digital Marketing</sub></p>
+                        </menuitem>
+                    </menu>
+                    <button onClick={() => open('https://vifx.co.id')} class={tw`focus:outline-none flex items-center bg-${_color}-600 rounded-xl py-1 px-2 text-white`}>OPEN<Right class={tw`fill-current w-5 ml-2`} /></button>
                 </div>
 
                 <h2 class={tw`font-bold mb-6 tracking-wider text-default`}>Certificates</h2>
