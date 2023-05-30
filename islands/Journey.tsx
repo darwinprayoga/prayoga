@@ -112,7 +112,7 @@ export default function Journey(props: { onNext?(): void, onBack?(): void }) {
                             <p>Self-branding based on NFT by web 3.0</p>
                         </menuitem>
                     </menu>
-                    <button onClick={() => open('https://biofip.com')} class={tw`focus:outline-none flex items-center bg-${_color}-600 rounded-xl py-1 px-2 text-white`}>OPEN<Right class={tw`fill-current w-5 ml-2`} /></button>
+                    <button onClick={() => open('https://biofip.vercel.app')} class={tw`focus:outline-none flex items-center bg-${_color}-600 rounded-xl py-1 px-2 text-white`}>OPEN<Right class={tw`fill-current w-5 ml-2`} /></button>
                 </div>
                 <div class={tw`flex mb-6 justify-between items-center bg-white p-4 rounded-2xl w-full`}>
                     <menu class={tw`justify-start items-center`}>
@@ -143,7 +143,7 @@ export default function Journey(props: { onNext?(): void, onBack?(): void }) {
                         <img draggable={false} src='/ibf.png' class={tw`w-12 mr-4`} />
                         <menuitem>
                             <h3 class={tw`text-dark`}>International Business</h3>
-                            <p>Foreign exchange, stock and commodity index provider, <sub>as a IT Specialist</sub></p>
+                            <p>Foreign exchange, stock and commodity index provider, <sub>as a Frontend Developer</sub></p>
                         </menuitem>
                     </menu>
                     <button onClick={() => open('https://ibftrader.com')} class={tw`focus:outline-none flex items-center bg-${_color}-600 rounded-xl py-1 px-2 text-white`}>OPEN<Right class={tw`fill-current w-5 ml-2`} /></button>
@@ -153,10 +153,10 @@ export default function Journey(props: { onNext?(): void, onBack?(): void }) {
                         <img draggable={false} src='/esandar.png' class={tw`w-12 mr-4`} />
                         <menuitem>
                             <h3 class={tw`text-dark`}>Esandar Arthamas</h3>
-                            <p>Financial market and trade company with commodities product, <sub>as a IT Specialist</sub></p>
+                            <p>Financial market and trade company with commodities product, <sub>as a Frontend Developer</sub></p>
                         </menuitem>
                     </menu>
-                    <button onClick={() => open('https://ibftrader.com')} class={tw`focus:outline-none flex items-center bg-${_color}-600 rounded-xl py-1 px-2 text-white`}>OPEN<Right class={tw`fill-current w-5 ml-2`} /></button>
+                    <button onClick={() => open('https://esandar.co.id')} class={tw`focus:outline-none flex items-center bg-${_color}-600 rounded-xl py-1 px-2 text-white`}>OPEN<Right class={tw`fill-current w-5 ml-2`} /></button>
                 </div>
 
                 <h2 class={tw`font-bold mb-6 tracking-wider text-default`}>Certificates</h2>
