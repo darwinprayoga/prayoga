@@ -1,0 +1,125 @@
+{
+  "build_id": "5e4cd3f32281e20a965e052d5aed7adf80a6e0ed",
+  "files": {
+    "island-pokemonsworld.js": [
+      "chunk-SGM67YJD.js",
+      "chunk-EX6SY4DB.js",
+      "chunk-BYRZ2NRM.js",
+      "chunk-JP5XG2OT.js"
+    ],
+    "island-pricing.js": [
+      "chunk-WHBPYST5.js",
+      "chunk-XHW4UOQ3.js",
+      "chunk-HMFVOOKV.js",
+      "chunk-EX6SY4DB.js",
+      "chunk-L3XQP5JH.js",
+      "chunk-BYRZ2NRM.js",
+      "chunk-JP5XG2OT.js"
+    ],
+    "island-server.js": [
+      "chunk-SGM67YJD.js",
+      "chunk-EX6SY4DB.js",
+      "chunk-L3XQP5JH.js",
+      "chunk-BYRZ2NRM.js",
+      "chunk-JP5XG2OT.js"
+    ],
+    "island-share.js": [
+      "chunk-SGM67YJD.js",
+      "chunk-EX6SY4DB.js",
+      "chunk-BYRZ2NRM.js",
+      "chunk-JP5XG2OT.js"
+    ],
+    "main.js": [
+      "chunk-GI7LLYGM.js",
+      "chunk-JP5XG2OT.js"
+    ],
+    "deserializer.js": [],
+    "signals.js": [
+      "chunk-GI7LLYGM.js",
+      "chunk-EX6SY4DB.js",
+      "chunk-JP5XG2OT.js"
+    ],
+    "chunk-GI7LLYGM.js": [],
+    "island-fashion.js": [
+      "chunk-XHW4UOQ3.js",
+      "chunk-L3XQP5JH.js",
+      "chunk-BYRZ2NRM.js",
+      "chunk-JP5XG2OT.js"
+    ],
+    "island-foodmenu.js": [
+      "chunk-HMFVOOKV.js",
+      "chunk-EX6SY4DB.js",
+      "chunk-L3XQP5JH.js",
+      "chunk-BYRZ2NRM.js",
+      "chunk-JP5XG2OT.js"
+    ],
+    "island-intro.js": [
+      "chunk-27P5JQCM.js",
+      "chunk-EX6SY4DB.js",
+      "chunk-L3XQP5JH.js",
+      "chunk-BYRZ2NRM.js",
+      "chunk-JP5XG2OT.js"
+    ],
+    "island-journey.js": [
+      "chunk-5WSDA4PG.js",
+      "chunk-SGM67YJD.js",
+      "chunk-EX6SY4DB.js",
+      "chunk-L3XQP5JH.js",
+      "chunk-BYRZ2NRM.js",
+      "chunk-JP5XG2OT.js"
+    ],
+    "island-page.js": [
+      "chunk-WHBPYST5.js",
+      "chunk-XHW4UOQ3.js",
+      "chunk-HMFVOOKV.js",
+      "chunk-27P5JQCM.js",
+      "chunk-5WSDA4PG.js",
+      "chunk-SGM67YJD.js",
+      "chunk-EX6SY4DB.js",
+      "chunk-L3XQP5JH.js",
+      "chunk-BYRZ2NRM.js",
+      "chunk-JP5XG2OT.js"
+    ],
+    "chunk-WHBPYST5.js": [
+      "chunk-XHW4UOQ3.js",
+      "chunk-HMFVOOKV.js",
+      "chunk-EX6SY4DB.js",
+      "chunk-BYRZ2NRM.js"
+    ],
+    "chunk-XHW4UOQ3.js": [
+      "chunk-L3XQP5JH.js",
+      "chunk-BYRZ2NRM.js"
+    ],
+    "chunk-HMFVOOKV.js": [
+      "chunk-EX6SY4DB.js",
+      "chunk-L3XQP5JH.js",
+      "chunk-BYRZ2NRM.js"
+    ],
+    "chunk-27P5JQCM.js": [
+      "chunk-EX6SY4DB.js",
+      "chunk-L3XQP5JH.js",
+      "chunk-BYRZ2NRM.js"
+    ],
+    "chunk-5WSDA4PG.js": [
+      "chunk-SGM67YJD.js",
+      "chunk-EX6SY4DB.js",
+      "chunk-L3XQP5JH.js",
+      "chunk-BYRZ2NRM.js"
+    ],
+    "chunk-SGM67YJD.js": [
+      "chunk-EX6SY4DB.js",
+      "chunk-BYRZ2NRM.js"
+    ],
+    "chunk-EX6SY4DB.js": [
+      "chunk-JP5XG2OT.js"
+    ],
+    "chunk-L3XQP5JH.js": [
+      "chunk-BYRZ2NRM.js"
+    ],
+    "chunk-BYRZ2NRM.js": [
+      "chunk-JP5XG2OT.js"
+    ],
+    "chunk-JP5XG2OT.js": [],
+    "metafile.json": []
+  }
+}
