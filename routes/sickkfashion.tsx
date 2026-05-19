@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
 import Fashion from "../islands/Fashion.tsx";
 import Head from "../components/Sync.tsx";
 

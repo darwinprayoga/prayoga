@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
 import Head from "../components/Sync.tsx";
 import Pricing from '../islands/Pricing.tsx';
 

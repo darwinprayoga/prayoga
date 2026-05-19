@@ -1,8 +1,5 @@
 // deno-lint-ignore-file no-explicit-any
-/** @jsx h */
-import { h } from "preact";
 import { StateUpdater, useEffect, useState } from "preact/hooks";
-import { tw } from '@twind';
 import { Close } from "../components/Icons.tsx";
 
 
@@ -38,70 +35,70 @@ export default function FoodMenu(props: { onBack?(): void }) {
         setAmount(burgerx + pizzax + sushix + honeyx + woodx + bobax)
     }, [setAmount, burgerx, pizzax, sushix, honeyx, woodx, bobax])
 
-    const Item = (props: { name: string, price: number, order: number, setOrder: StateUpdater<number>, option: string, setOption: StateUpdater<string>, src: string }) => {
+    const Item = (props: { name: string, price: number, order: number, setOrder: (val: any) => void, option: string, setOption: (val: any) => void, src: string }) => {
         return (
-            <div class={tw`grid grid-cols-5 py-4 w-full`}>
-                <img draggable={false} onClick={() => setHero({ src: props.src })} class={tw`pointer w-full rounded-2xl col-span-1`} src={props.src} />
-                <menuitem class={tw`justify-center pl-4 col-span-3`}>
-                    <section class={tw`flex w-full justify-between`}>
+            <div class="grid grid-cols-5 py-4 w-full">
+                <img draggable={false} onClick={() => setHero({ src: props.src })} class="pointer w-full rounded-2xl col-span-1" src={props.src} />
+                <menuitem class="justify-center pl-4 col-span-3">
+                    <section class="flex w-full justify-between">
                         <h3>{props.name}</h3>
                         <h3>${props.price}</h3>
                     </section>
-                    <input defaultValue={props.option} onChange={(e) => props.setOption(e.currentTarget.value)} class={tw`w-full bg-hint placeholder-darkTrans`} type="text" name="text" placeholder="option" />
+                    <input defaultValue={props.option} onChange={(e) => props.setOption(e.currentTarget.value)} class="w-full bg-hint placeholder-darkTrans" type="text" name="text" placeholder="option" />
                 </menuitem>
-                <menu class={tw`pl-4 justify-between`}>
-                    <button onClick={() => props.order > 0 && props.setOrder(props.order - 1)} class={tw`flex px-2 justify-center font-bold text-red-600 focus:outline-none`}>-</button>
+                <menu class="pl-4 justify-between">
+                    <button onClick={() => props.order > 0 && props.setOrder(props.order - 1)} class="flex px-2 justify-center font-bold text-red-600 focus:outline-none">-</button>
                     <h3>{props.order}</h3>
-                    <button onClick={() => props.setOrder(props.order + 1)} class={tw`flex px-2 justify-center font-bold text-blue-600 focus:outline-none`}>+</button>
+                    <button onClick={() => props.setOrder(props.order + 1)} class="flex px-2 justify-center font-bold text-blue-600 focus:outline-none">+</button>
                 </menu>
 
-                {hero && <div onClick={() => setHero(false)} class={tw`modal`}><img draggable={false} class={tw`pointer w-full max-w-screen-md`} src={hero.src} /></div>}
+                {hero && <div onClick={() => setHero(false)} class="modal"><img draggable={false} class="pointer w-full max-w-screen-md" src={hero.src} /></div>}
             </div>
         )
     }
 
-    const Checkout = (props: { name: string, price: number, order: number, option: string, setTotal: StateUpdater<number>, src: string }) => {
+    const Checkout = (props: { name: string, price: number, order: number, option: string, setTotal: (val: any) => void, src: string }) => {
 
         useEffect(() => {
             props.setTotal(props.price * props.order)
         }, [props.setTotal])
 
         return (
-            <div class={tw`grid grid-cols-5 py-4 w-full`}>
-                <img draggable={false} onClick={() => setHero({ src: props.src })} class={tw`pointer h-full rounded-2xl col-span-1`} src={props.src} />
-                <menuitem class={tw`justify-center pl-4 col-span-3`}>
-                    <section class={tw`flex w-full justify-between`}>
+            <div class="grid grid-cols-5 py-4 w-full">
+                <img draggable={false} onClick={() => setHero({ src: props.src })} class="pointer h-full rounded-2xl col-span-1" src={props.src} />
+                <menuitem class="justify-center pl-4 col-span-3">
+                    <section class="flex w-full justify-between">
                         <h3>{props.name}</h3>
                         <h3>${props.price * props.order}</h3>
                     </section>
-                    <p class={tw`text-sub`}>{props.option}</p>
+                    <p class="text-sub">{props.option}</p>
                 </menuitem>
-                <menu class={tw`pl-4 justify-center`}>
+                <menu class="pl-4 justify-center">
                     <h1>{props.order}</h1>
                 </menu>
 
-                {hero && <div onClick={() => setHero(false)} class={tw`modal`}><img draggable={false} class={tw`pointer w-full max-w-screen-md`} src={hero.src} /></div>}
+                {hero && <div onClick={() => setHero(false)} class="modal"><img draggable={false} class="pointer w-full max-w-screen-md" src={hero.src} /></div>}
             </div>
         )
     }
 
     return (
         <div>
-            {props.onBack && <button onClick={props.onBack} class={tw`fixed z-10 top-0 right-0 flex p-4 focus:outline-none text-yellow-500 mr-2 items-center`}><Close class={tw`fill-current w-[30px]`} /></button>}
+            {props.onBack && <button onClick={props.onBack} class="fixed z-10 top-0 right-0 flex p-4 focus:outline-none text-yellow-500 mr-2 items-center"><Close class="fill-current w-[30px]" /></button>}
 
 
-            <div class={tw`fixed inset-0 flex flex-col items-center bg-red-500`}>
+            <div class="fixed inset-0 flex flex-col items-center bg-red-500">
 
-                {index != 1 && <h1 class={tw`m-4`}>FastMeal⚡</h1>}
+                {index != 1 && <h1 class="m-4">FastMeal⚡</h1>}
 
                 {index == 0 &&
-                    <main class={tw`w-full h-full bg-white text-sub shadow-xl rounded-t-[32px]`}>
+                    <main class="w-full h-full bg-white text-sub shadow-xl rounded-t-[32px]">
 
                         <menu>
-                            <div class={tw`w-14 h-1 rounded-xl bg-default my-2 animate-pulse`} />
+                            <div class="w-14 h-1 rounded-xl bg-default my-2 animate-pulse" />
                         </menu>
 
-                        <menuitem class={tw`pb-20 divide-y`}>
+                        <menuitem class="pb-20 divide-y">
 
                             <Item name='Burger' price={99} order={burger} option={burgero} setOption={setBurgero} setOrder={setBurger} src='/fastmeal/burger.png' />
 
@@ -114,15 +111,15 @@ export default function FoodMenu(props: { onBack?(): void }) {
                     </main>}
 
                 {index == 1 &&
-                    <main class={tw`overflow-auto w-full h-full bg-white text-sub shadow-xl rounded-t-[32px]`}>
+                    <main class="overflow-auto w-full h-full bg-white text-sub shadow-xl rounded-t-[32px]">
 
                         <menu>
-                            <div class={tw`w-14 h-1 rounded-xl bg-default my-2 animate-pulse`} />
+                            <div class="w-14 h-1 rounded-xl bg-default my-2 animate-pulse" />
                         </menu>
 
                         <menuitem>
 
-                            <h2 class={tw`text-default`}>Food</h2>
+                            <h2 class="text-default">Food</h2>
 
                             {burger > 0 && <Checkout setTotal={setBurgerx} name='Burger' price={99} option={burgero} order={burger} src='/fastmeal/burger.png' />}
 
@@ -130,7 +127,7 @@ export default function FoodMenu(props: { onBack?(): void }) {
 
                             {sushi > 0 && <Checkout setTotal={setSuhsix} name='Sushi' price={169} option={sushio} order={sushi} src='/fastmeal/sushi.png' />}
 
-                            <h2 class={tw`text-default`}>Drink</h2>
+                            <h2 class="text-default">Drink</h2>
 
                             {honey > 0 && <Checkout setTotal={setHoneyx} name='Old Honey Barn' price={34} option={honeyo} order={honey} src='/fastmeal/honey.png' />}
 
@@ -140,9 +137,9 @@ export default function FoodMenu(props: { onBack?(): void }) {
 
                         </menuitem>
 
-                        <div class={tw`divider`} />
+                        <div class="divider" />
 
-                        <section class={tw`flex mt-4 pb-32 justify-between`}>
+                        <section class="flex mt-4 pb-32 justify-between">
                             <h1>Amount:</h1>
                             <h1>${amount}</h1>
                         </section>
@@ -150,13 +147,13 @@ export default function FoodMenu(props: { onBack?(): void }) {
                     </main>}
 
                 {index == 2 &&
-                    <main class={tw`w-full h-full bg-white text-sub shadow-xl rounded-t-[32px]`}>
+                    <main class="w-full h-full bg-white text-sub shadow-xl rounded-t-[32px]">
 
                         <menu>
-                            <div class={tw`w-14 h-1 rounded-xl bg-default my-2 animate-pulse`} />
+                            <div class="w-14 h-1 rounded-xl bg-default my-2 animate-pulse" />
                         </menu>
 
-                        <menuitem class={tw`pb-20 divide-y`}>
+                        <menuitem class="pb-20 divide-y">
 
                             <Item name='Old Honey Barn' price={34} order={honey} option={honeyo} setOption={setHoneyo} setOrder={setHoney} src='/fastmeal/honey.png' />
 
@@ -169,17 +166,17 @@ export default function FoodMenu(props: { onBack?(): void }) {
 
             </div>
 
-            <div class={tw`fixed flex justify-center bottom-0 left-0 right-0`}>
-                <div class={tw`flex shadow-inner rounded-full mb-4 bg-red-500`}>
-                    <button onClick={() => setIndex(0)} class={tw`focus:outline-none px-10 text-white flex flex-col justify-center items-center`}>
-                        <h1 class={tw`mb-1`}>🍔</h1>
+            <div class="fixed flex justify-center bottom-0 left-0 right-0">
+                <div class="flex shadow-inner rounded-full mb-4 bg-red-500">
+                    <button onClick={() => setIndex(0)} class="focus:outline-none px-10 text-white flex flex-col justify-center items-center">
+                        <h1 class="mb-1">🍔</h1>
                         <p>Food</p>
                     </button>
-                    <button onClick={() => setIndex(1)} class={tw`focus:outline-none border(yellow-500 4) p-4 shadow-md bg-white text-yellow-500 rounded-full text-white flex flex-col justify-center items-center`}>
+                    <button onClick={() => setIndex(1)} class="focus:outline-none border(yellow-500 4) p-4 shadow-md bg-white text-yellow-500 rounded-full text-white flex flex-col justify-center items-center">
                         <h1>🛒</h1>
                     </button>
-                    <button onClick={() => setIndex(2)} class={tw`focus:outline-none px-10 text-white flex flex-col justify-center items-center`}>
-                        <h1 class={tw`mb-1`}>🍺</h1>
+                    <button onClick={() => setIndex(2)} class="focus:outline-none px-10 text-white flex flex-col justify-center items-center">
+                        <h1 class="mb-1">🍺</h1>
                         <p>Drink</p>
                     </button>
                 </div>
